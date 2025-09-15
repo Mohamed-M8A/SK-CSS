@@ -1,0 +1,144 @@
+/* =========================
+   ✅ COMMENTS
+========================= */
+
+#comments {
+  margin: 20px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+#comments .title {
+  margin-bottom: 15px;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 6px;
+  font-size: 16px;
+}
+
+.comments-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.comment {
+  border: 1px solid #eee;
+  background: #fdfdfd;
+  padding: 12px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+.comment:hover {
+  box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+}
+
+.comment .header,
+.reply .header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.comment .header img,
+.reply .header img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.comment .header .name,
+.reply .header .name {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.comment .time,
+.reply .time {
+  font-size: 12px;
+  color: #777;
+  margin-left: 8px;
+}
+
+.comment .body,
+.reply .body {
+  margin-left: 45px;
+  line-height: 1.6;
+}
+
+.replies {
+  margin-top: 12px;
+  margin-left: 35px;
+  border-left: 2px solid #007bff22; 
+  padding-left: 12px;
+}
+
+.reply {
+  background: #f5f9ff; 
+  border: 1px solid #d6e4ff;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 12px;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.reply:hover {
+  background: #eef5ff;
+  box-shadow: 0 2px 8px rgba(0,123,255,0.15);
+}
+
+.reply .body {
+  margin-left: 40px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.reply-btn,
+.add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  margin-left: 45px;
+  padding: 10px 18px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+
+  background-image: linear-gradient(90deg, #000000, #434343);
+  background-size: 200% 200%;
+  transition: box-shadow 0.2s ease;
+}
+
+.reply-btn:hover,
+.add-btn:hover {
+  animation: gradientShift 4s ease infinite;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+
+.reply-form,
+#main-comment-form {
+  display: none;
+  margin-top: 12px;
+}
+.reply-form.show,
+#main-comment-form.show {
+  display: block;
+}
+
+.comment-iframe {
+  width: 100%;
+  height: 260px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
