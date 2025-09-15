@@ -1,0 +1,60 @@
+/* =========================
+   ✅ SHARE BUTTONS
+========================= */
+
+.share-box {
+  text-align: center;
+}
+
+.share-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.share-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.share-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+
+.share-btn svg {
+  width: 30px;
+  height: 30px;
+  fill: currentColor;
+}
+
+/* Hover effect */
+.share-btn:hover {
+  color: #fff;
+  transform: scale(1.15);
+  opacity: 0.9;
+}
+
+/* ألوان الشبكات */
+.s-fb { background: #1877f2; }
+.s-x  { background: #000000; }
+.s-pin { background: #e60023; }
+.s-wa { background: #25d366; }
+.s-tg { background: #0088cc; }
+.s-rd { background: #ff4500; }  
+.s-em { background: #7f7f7f; }   
+.s-copy { background: #555555; } 
+
+/* =========================
+   ✅ SHARE BUTTONS
+========================= */
