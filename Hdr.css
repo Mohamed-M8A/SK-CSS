@@ -1,0 +1,330 @@
+/* ===========================
+    الهيدر العام
+=========================== */
+#header {
+  background: #050a1c; 
+  color: white;
+  padding: 10px 20px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* ===========================
+    اللوجو
+=========================== */
+.logo img {
+  max-height: 50px; 
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* ===========================
+    شريط البحث 
+=========================== */
+.search-container {
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  direction: rtl;
+}
+.search-box-form {
+  display: flex;
+  align-items: center;
+  max-width: none;
+  width: 100%;
+}
+.input-wrapper {
+  flex: 1;
+  padding: 2.5px;
+  background: linear-gradient(270deg, #4f46e5, #ec4899, #10b981, #f59e0b);
+  background-size: 600% 600%;
+  animation: gradientShift 8s ease infinite;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.search-box-input {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: #111;
+  height: 48px;
+}
+.search-box-input::placeholder { color: #444; }
+.search-box-button {
+  margin-left: -10px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #ffc107, #ff9800);
+  color: white;
+  font-size: 15px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  height: 48px;
+}
+.search-box-button:hover {
+  background: linear-gradient(135deg, #ff9800, #ffc107);
+}
+
+.search-box-button .icon {
+  width: 25px;   
+  height: 25px;   
+  fill: #fff;     
+}
+
+/* ===========================
+    السوشال + دارك مود + كارت
+=========================== */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* الحاوية */
+.social-icons {
+  display: flex;
+  gap: 5px; 
+  align-items: center;
+}
+
+/* شكل الدواير */
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;   
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+/* تأثير hover */
+.social-icons a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffd700;
+}
+
+/* الأيقونات كلها موحدة */
+.social-icons i,
+.social-icons svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+  line-height: 1;
+  flex-shrink: 0;
+  fill: currentColor; 
+}
+
+/* زر الوضع الداكن */
+#dark-header label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+#dark-header label:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* ===========================
+    Cart Widget
+=========================== */
+#cart-widget-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  color: #f0f0f0;
+  position: relative;
+  transition: color 0.3s ease;
+  margin-left: 10px;
+}
+
+#cart-widget-header:hover { 
+  color: #a0a0a0; 
+}
+
+#cart-widget-header .cart-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#cart-widget-header .cart-icon svg {
+  width: 32px;
+  height: 32px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  transition: stroke 0.3s ease;
+  display: block;
+}
+
+#cart-widget-header:hover .cart-icon svg { 
+  stroke: #a0a0a0; 
+}
+
+#cart-count {
+  font-weight: bold;
+  font-size: 12px;
+  background-color: #ef4444;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+#cart-count.active { 
+  opacity: 1; 
+  transform: scale(1); 
+}
+
+@media (max-width: 768px) {
+  #cart-count {
+    width: 16px;
+    height: 16px;
+    font-size: 11px;
+    top: -5px;
+    right: -5px;
+  }
+}
+
+/* ===========================
+    متجاوب (الموبايل)
+=========================== */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .logo { order: 1; }
+
+  .header-actions {
+    order: 2;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .search-container {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .search-box-form { max-width: 100%; }
+}
+
+/* ===========================
+   🌙☀️ Dark Mode Toggle
+=========================== */
+.dark-mode-toggle {
+  margin-left: 15px;
+}
+
+#dark-toggler {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#dark-toggler:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: rotate(10deg);
+}
+
+/* SVG أيقونة */
+#dark-toggler svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+/* الوضع الافتراضي: القمر ظاهر */
+#dark-toggler .icon-moon { display: inline; }
+#dark-toggler .icon-sun  { display: none; }
+
+/* عند تفعيل الوضع الداكن: القمر يختفي والشمس تظهر */
+body.dark-mode #dark-toggler .icon-moon { display: none; }
+body.dark-mode #dark-toggler .icon-sun  { display: inline; }
+
+/* ===========================
+Back-to-top
+=========================== */
+
+#back-to-top {
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+  }
+
+  #back-to-top a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background: #222;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+
+  #back-to-top a:hover {
+    background: #444;
+  }
+
+  #back-to-top .icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+  }
