@@ -111,7 +111,7 @@ hr {
 
 .video-wrap {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
   height: 0;
   overflow: hidden;
   max-width: 100%;
@@ -124,6 +124,45 @@ hr {
   left: 0;
   width: 100% !important;
   height: 100% !important;
+}
+
+
+/* =========================
+   ✅ VIDEO Responsive (Mobile Fix)
+   - يخلي الفيديو يلتزم داخل الاطار
+   - يمنع خروجه برّة العرض
+   - يضبط الارتفاع حسب حجم الشاشة
+========================= */
+
+@media (max-width: 768px) {
+  .video-wrap {
+    padding-bottom: 56.25%; 
+    height: auto;
+    max-width: 100%;
+  }
+
+  .video-wrap iframe,
+  .video-wrap video,
+  .video-wrap object {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 80vh; 
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-wrap {
+    padding-bottom: 56.25%; 
+  }
+
+  .video-wrap iframe,
+  .video-wrap video,
+  .video-wrap object {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain;
+  }
 }
 
 /* =========================
