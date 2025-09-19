@@ -127,23 +127,8 @@ hr {
 }
 
 /* =========================
-   ✅ UTILITIES
+   ✅ icons
 ========================= */
-
-/* Display */
-.d-inline-block { display: inline-block !important; }
-.d-flex { display: flex !important; }
-.d-none { display: none !important; }
-
-/* Spacing */
-.mb-4 { margin-bottom: 1.5rem !important; }
-.mb-5 { margin-bottom: 3rem !important; }
-.pt-4 { padding-top: 1.5rem !important; }
-.pb-4 { padding-bottom: 1.5rem !important; }
-.px-3 {
-  padding-right: 1rem;
-  padding-left: 1rem;
-}
 
 /* Icons */
 .icon-lg {
