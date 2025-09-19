@@ -25,23 +25,6 @@ iframe { border: 0; }
   :root { scroll-behavior: smooth; }
 }
 
-#post-body {
-  overflow-x: hidden !important;
-  max-width: 100% !important;
-  width: 100% !important;
-}
-
-#post-body img,
-#post-body iframe,
-#post-body object,
-#post-body embed,
-#post-body video {
-  max-width: 100% !important;
-  height: auto !important;
-  display: block;
-}
-
-
 #primary {
   width: 100%;
   margin: 0 auto;
@@ -114,6 +97,26 @@ hr {
   background: currentColor;
   opacity: .25;
 }
+
+/* ✅ ضبط محتوى البوست للجوال فقط */
+@media (max-width: 768px) {
+  #post-body {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  #post-body img,
+  #post-body iframe,
+  #post-body object,
+  #post-body embed,
+  #post-body video {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+  }
+}
+
 
 /* =========================
    ✅ icons
