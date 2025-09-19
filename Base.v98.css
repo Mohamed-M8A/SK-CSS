@@ -103,16 +103,18 @@ overflow-x: hidden !important;
  max-width: 100% !important;
 }
 
-/* ✅ تحجيم الفيديوهات فقط */
-#post-body iframe,
-#post-body object,
-#post-body embed,
-#post-body video {
-  width: 100% !important;
-  max-width: 100% !important;
-  height: auto !important;
-  display: block;
-  margin: 15px auto;
+/* ✅ تحجيم الفيديوهات للجوال فقط */
+@media (max-width: 768px) {
+  #post-body iframe,
+  #post-body object,
+  #post-body embed,
+  #post-body video {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin: 15px auto;
+  }
 }
 
 /* =========================
