@@ -1,5 +1,5 @@
 /* =========================
-   ✅ RESET & BASE
+   ✅ BASE
 ========================= */
 
 body {
@@ -96,6 +96,11 @@ hr {
   height: 1px;
   background: currentColor;
   opacity: .25;
+}
+
+.product-box > * {
+overflow-x: hidden !important;
+ max-width: 100% !important;
 }
 
 /* =========================
