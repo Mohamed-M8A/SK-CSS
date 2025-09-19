@@ -98,25 +98,6 @@ hr {
   opacity: .25;
 }
 
-/* ✅ ضبط محتوى البوست للجوال فقط */
-@media (max-width: 768px) {
-  #post-body {
-    overflow-x: hidden !important;
-    max-width: 100% !important;
-    width: 100% !important;
-  }
-
-  #post-body iframe,
-  #post-body object,
-  #post-body embed,
-  #post-body video {
-    max-width: 100% !important;
-    height: auto !important;
-    display: block;
-  }
-}
-
-
 /* =========================
    ✅ icons
 ========================= */
