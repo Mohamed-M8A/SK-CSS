@@ -25,9 +25,20 @@ iframe { border: 0; }
   :root { scroll-behavior: smooth; }
 }
 
-.product-box > * {
+#post-body {
   overflow-x: hidden !important;
   max-width: 100% !important;
+  width: 100% !important;
+}
+
+#post-body img,
+#post-body iframe,
+#post-body object,
+#post-body embed,
+#post-body video {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
 }
 
 
@@ -102,71 +113,6 @@ hr {
   height: 1px;
   background: currentColor;
   opacity: .25;
-}
-
-
-/* =========================
-   ✅ MEDIA (Images, SVG, Video)
-========================= */
-
-.video-wrap {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-  height: 0;
-  overflow: hidden; /* ✅ يمنع أي خروج خارج الحاوية */
-  max-width: 100%;
-}
-
-/* الفيديو / iframe */
-.video-wrap iframe,
-.video-wrap video,
-.video-wrap object,
-.video-wrap .BLOG_video_class,
-.video-wrap object[id^="BLOG_video-"] {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  height: 100% !important;
-  max-width: 100% !important;   /* ✅ الفيديو ما يتجاوزش عرض الحاوية */
-  max-height: 100% !important;  /* ✅ الفيديو ما يتجاوزش ارتفاع الحاوية */
-  object-fit: contain;          /* يخلي الفيديو متناسب جوه الإطار */
-}
-
-
-/* =========================
-   ✅ VIDEO Responsive (Mobile Fix)
-========================= */
-
-@media (max-width: 768px) {
-  .video-wrap {
-    padding-bottom: 56.25%; /* حافظ على النسبة */
-    height: auto;
-    max-width: 100%;
-  }
-
-  .video-wrap iframe,
-  .video-wrap video,
-  .video-wrap object {
-    width: 100% !important;
-    height: auto !important;
-    max-height: 80vh; /* الفيديو ما يغطيش الشاشة كاملة */
-    object-fit: contain;
-  }
-}
-
-@media (max-width: 480px) {
-  .video-wrap {
-    padding-bottom: 56.25%; /* ممكن تعدلها لو عندك فيديوهات طولية */
-  }
-
-  .video-wrap iframe,
-  .video-wrap video,
-  .video-wrap object {
-    width: 100% !important;
-    height: auto !important;
-    object-fit: contain;
-  }
 }
 
 /* =========================
