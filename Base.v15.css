@@ -101,24 +101,34 @@ hr {
 /* =========================
    ✅ التحجيم للجوال
 ========================= */
-
 .product-box > * {
-overflow-x: hidden !important;
- max-width: 100% !important;
+  overflow-x: hidden !important;
+  max-width: 100% !important;
 }
 
-/* ✅ تحجيم الفيديوهات للجوال فقط */
+/* ✅ تحجيم الفيديوهات والصور للجوال فقط */
 @media (max-width: 768px) {
   #post-body iframe,
   #post-body object,
   #post-body embed,
-  #post-body img,
-  #post-body video {
+  #post-body video,
+  #post-body img {
     width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
     display: block;
     margin: 15px auto;
+  }
+
+  /* 🚫 استثناء صور السلايدر والمصغرات وصورة البائع */
+  .thumbnail-container img,
+  .main-image-container img,
+  .profile-image {
+    width: auto !important;
+    height: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    display: inline-block !important;
   }
 }
 
