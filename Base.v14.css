@@ -112,7 +112,7 @@ overflow-x: hidden !important;
   #post-body iframe,
   #post-body object,
   #post-body embed,
-  #post-body image,
+  #post-body img,
   #post-body video {
     width: 100% !important;
     max-width: 100% !important;
