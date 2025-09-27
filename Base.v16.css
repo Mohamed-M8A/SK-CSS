@@ -112,7 +112,7 @@ hr {
   #post-body object,
   #post-body embed,
   #post-body video,
-  #post-body img {
+   {
     width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
