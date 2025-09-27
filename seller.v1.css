@@ -1,5 +1,5 @@
 /* ============================
-   ✅ شريط البائع
+   ✅ شريط البائع (Responsive)
 ============================== */
 
 .bar {
@@ -9,25 +9,29 @@
     background: linear-gradient(to right, #6a11cb, #2575fc);
     padding: 14px 28px;
     width: 100%;
-    height: 80px;
+    min-height: 80px;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, sans-serif;
+    flex-wrap: wrap; /* يخلي العناصر تنزل تحت بعض لو مفيش مساحة */
+    gap: 12px;
 }
 
 .profile-image {
     width: 64px;
     height: 64px;
     object-fit: cover;
+    border-radius: 50%; /* شكل دائري أحلى */
     border: 2px solid #000;
+    flex-shrink: 0; /* تمنع الصورة من التصغير الإجباري */
 }
 
 .text {
     color: #ffffff;
     font-size: 20px;
     font-weight: 600;
-    margin-left: 24px;
-    flex-grow: 1;
+    margin-left: 16px;
+    flex: 1; /* تاخد المساحة المتبقية */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -36,6 +40,7 @@
 .buttons {
     display: flex;
     gap: 12px;
+    flex-wrap: wrap; /* تخلي الأزرار تنزل سطرين لو الشاشة صغيرة */
 }
 
 .button {
@@ -46,6 +51,7 @@
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
+    border-radius: 6px;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -54,11 +60,28 @@
     background-color: rgba(255, 255, 255, 0.25);
 }
 
+/* ============================
+   ✅ Responsive Breakpoints
+============================== */
+
+/* تابلت */
+@media (max-width: 992px) {
+    .text {
+        font-size: 18px;
+        margin-left: 12px;
+    }
+
+    .button {
+        padding: 8px 16px;
+        font-size: 15px;
+    }
+}
+
+/* موبايل */
 @media (max-width: 768px) {
     .bar {
         flex-direction: column;
         align-items: flex-start;
-        height: auto;
         padding: 16px;
     }
 
@@ -69,18 +92,37 @@
     }
 
     .text {
-        font-size: 28px;
-        margin-left: 0;
-        margin-bottom: 10px;
+        font-size: 22px;
+        margin: 0 0 10px 0;
+        width: 100%;
+        text-align: left;
     }
 
     .buttons {
         width: 100%;
         justify-content: flex-start;
+        gap: 8px;
     }
 
     .button {
         width: 100%;
         text-align: center;
+    }
+}
+
+/* موبايل صغير جدًا */
+@media (max-width: 480px) {
+    .text {
+        font-size: 18px;
+    }
+
+    .profile-image {
+        width: 50px;
+        height: 50px;
+    }
+
+    .button {
+        font-size: 14px;
+        padding: 8px;
     }
 }
