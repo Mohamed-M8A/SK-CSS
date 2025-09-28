@@ -255,6 +255,115 @@
 }
 
 /* ===========================
+   قائمة اختيار دولة 
+=========================== */
+
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.custom-dropdown .selected {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  color: #000; 
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.options {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin: 0;
+  padding: 4px 0;
+  list-style: none;
+  display: none;
+  max-height: 220px;
+  overflow-y: auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 999999;
+}
+
+.options li {
+  padding: 6px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #000;
+}
+
+.options li:hover {
+  background: #f0f0f0;
+}
+
+/* Toast */
+#country-toast {
+  visibility: hidden;
+  min-width: 220px;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+  position: fixed;
+  z-index: 999999;
+  left: 50%;
+  top: 20px;
+  font-size: 14px;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+#country-toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.custom-dropdown .selected::after {
+  content: "\25BC"; /* ▼ */
+  font-size: 10px;
+  margin-left: 6px;
+  color: #555;
+}
+.custom-dropdown.open .selected::after {
+  content: "\25B2"; /* ▲ */
+}
+
+
+.dark-mode .custom-dropdown .selected {
+  background: #222;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.dark-mode .options {
+  background: #222;
+  border: 1px solid #555;
+}
+
+.dark-mode .options li {
+  color: #fff;
+}
+
+.dark-mode .options li:hover {
+  background: #333;
+}
+
+.dark-mode #country-toast {
+  background: #111;
+  color: #fff;
+}
+
+/* ===========================
    🌙☀️ Dark Mode Toggle
 =========================== */
 .dark-mode-toggle {
