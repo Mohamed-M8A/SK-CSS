@@ -87,7 +87,7 @@
   flex-direction: column;
 }
 .post-title {
-  font-size: 12px; 
+  font-size: 14px; 
   font-weight: 600;
   color: #111;
   margin: 0 0 8px; 
@@ -235,7 +235,7 @@
     padding: 12px;
   }
   .post-title {
-    font-size: 10px;
+    font-size: 14px;
   }
   .discounted-price {
     font-size: 12px;
