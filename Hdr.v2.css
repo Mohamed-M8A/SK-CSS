@@ -37,12 +37,14 @@
   flex: 1;
   direction: rtl;
 }
+
 .search-box-form {
   display: flex;
   align-items: center;
   max-width: none;
   width: 100%;
 }
+
 .input-wrapper {
   flex: 1;
   padding: 2.5px;
@@ -50,11 +52,13 @@
   background-size: 600% 600%;
   animation: gradientShift 8s ease infinite;
 }
+
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
 .search-box-input {
   width: 100%;
   padding: 12px 20px;
@@ -65,7 +69,9 @@
   color: #111;
   height: 48px;
 }
+
 .search-box-input::placeholder { color: #444; }
+
 .search-box-button {
   margin-left: -10px;
   padding: 12px 20px;
@@ -82,6 +88,7 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   height: 48px;
 }
+
 .search-box-button:hover {
   background: linear-gradient(135deg, #ff9800, #ffc107);
 }
@@ -93,51 +100,12 @@
 }
 
 /* ===========================
-    السوشال + دارك مود + كارت
+    دارك مود + كارت
 =========================== */
 .header-actions {
   display: flex;
   align-items: center;
   gap: 15px;
-}
-
-/* الحاوية */
-.social-icons {
-  display: flex;
-  gap: 5px; 
-  align-items: center;
-}
-
-/* شكل الدواير */
-.social-icons a {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: transparent;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;   
-  transition: 0.3s ease;
-  text-decoration: none;
-}
-
-/* تأثير hover */
-.social-icons a:hover {
-  background: rgba(255, 255, 255, 0.15);
-  color: #ffd700;
-}
-
-/* الأيقونات كلها موحدة */
-.social-icons i,
-.social-icons svg {
-  width: 22px;
-  height: 22px;
-  display: block;
-  line-height: 1;
-  flex-shrink: 0;
-  fill: currentColor; 
 }
 
 /* زر الوضع الداكن */
@@ -151,6 +119,7 @@
   border-radius: 50%;
   transition: background 0.3s ease;
 }
+
 #dark-header label:hover {
   background: rgba(255,255,255,0.15);
 }
@@ -257,7 +226,6 @@
 /* ===========================
    قائمة اختيار دولة 
 =========================== */
-
 .custom-dropdown {
   position: relative;
   display: inline-block;
@@ -334,10 +302,10 @@
   margin-left: 6px;
   color: #555;
 }
+
 .custom-dropdown.open .selected::after {
   content: "\25B2"; /* ▲ */
 }
-
 
 .dark-mode .custom-dropdown .selected {
   background: #222;
@@ -408,32 +376,31 @@ body.dark-mode #dark-toggler .icon-sun  { display: inline; }
 /* ===========================
 Back-to-top
 =========================== */
-
 #back-to-top {
-    position: fixed;
-    left: 30px;
-    bottom: 30px;
-  }
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+}
 
-  #back-to-top a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 36px;
-    height: 36px;
-    background: #222;
-    color: #fff;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: background 0.3s ease;
-  }
+#back-to-top a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  background: #222;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
 
-  #back-to-top a:hover {
-    background: #444;
-  }
+#back-to-top a:hover {
+  background: #444;
+}
 
-  #back-to-top .icon {
-    width: 18px;
-    height: 18px;
-    fill: currentColor;
-  }
+#back-to-top .icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
