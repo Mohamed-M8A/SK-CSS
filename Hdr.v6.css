@@ -2,7 +2,7 @@
     الهيدر العام
 =========================== */
 #header {
-  background: #050a1c; 
+  background: #131921; 
   color: white;
   padding: 10px 20px;
 }
@@ -29,11 +29,10 @@
 /* ===========================
     شريط البحث 
 =========================== */
-/* =================== ✅ Search =================== */
 .search-container {
   padding: 0 10px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex: 1;
   direction: rtl;
@@ -44,29 +43,25 @@
   align-items: center;
   width: 100%;
   max-width: 700px;
+  background: #fff;              
   border: 1px solid #ccc;
-  border-radius: 6px; /* حواف ناعمة */
-  overflow: hidden;   /* عشان الزر والإنبوت يندمجوا جوه نفس الإطار */
-  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;              
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ✅ تأثير عند النقر */
 .search-box-form:focus-within {
   border-color: #febd69;
-  box-shadow: 0 0 4px rgba(254, 189, 105, 0.6);
-}
-
-.input-wrapper {
-  flex: 1;
+  box-shadow: inset 0 0 0 1px #febd69;
 }
 
 .search-box-input {
-  width: 100%;
+  flex: 1;
   padding: 12px 18px;
   font-size: 15px;
-  border: none; /* نشيل الحدود من الانبوت نفسه */
+  border: none;
   outline: none;
-  background-color: #fff;
+  background: transparent;
   color: #111;
   height: 48px;
 }
@@ -75,20 +70,19 @@
   color: #666;
 }
 
-/* زر البحث */
 .search-box-button {
   padding: 12px 22px;
   background: #febd69;
   color: #111;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 600;
   border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 6px;
-  transition: background 0.3s ease, color 0.3s ease;
   height: 48px;
+  transition: background 0.3s ease;
 }
 
 .search-box-button:hover {
@@ -96,17 +90,20 @@
 }
 
 .search-box-button .icon {
-  width: 22px;
-  height: 22px;
-  fill: currentColor;
+  width: 20px;
+  height: 20px;
+  fill: #111;
 }
 
-/* ✅ متجاوب */
+/* =========================
+   Responsive
+========================= */
 @media (max-width: 768px) {
   .search-box-form {
-    max-width: 100%;
+    max-width: 100%;   /* ✅ موبايل: ياخد الشاشة كلها */
   }
 }
+
 /* ===========================
     دارك مود + كارت
 =========================== */
