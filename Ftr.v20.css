@@ -5,7 +5,6 @@
   background: #000;
   color: #fff;
   direction: rtl;
-  font-family: "Tajawal", sans-serif;
 }
 
 /* الحاوية */
@@ -102,7 +101,7 @@
 
 /* الحقوق */
 .footer-bottom {
-  background: #020608 !important;
+  background: #0f0f0f !important;
   color: #ccc;
   text-align: center;
   padding: 12px 10px;
