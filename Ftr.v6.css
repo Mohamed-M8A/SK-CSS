@@ -67,9 +67,10 @@
 
 /* سوشيال */
 .footer-social {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
-  gap: 10px;
+  display: grid !important;
+  grid-template-columns: repeat(3, 50px) !important;
+  gap: 12px !important;
+  justify-content: start !important;
 }
 
 .footer-social a {
