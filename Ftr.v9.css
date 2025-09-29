@@ -20,7 +20,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 70px;
+  gap: 100px;
 }
 
 /* العناوين */
