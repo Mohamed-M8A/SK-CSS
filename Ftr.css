@@ -23,28 +23,28 @@
   padding: 30px 20px;
 }
 
-/* عناوين الودجت */
-#footer .widget-title {
+/* عنوان الودجت */
+.widget-title {
   text-transform: uppercase;
-  font-size: 16px !important;
-  font-weight: 700 !important;
-  color: #ff4757;
+  font-size: 16px;
+  font-weight: 700;
+  color: #f1c40f;
   margin-bottom: 15px;
 }
-#footer .widget-title:after {
+.widget-title:after {
   content: "";
   display: block;
   width: 60px;
-  border-bottom: 2px solid #ff4757;
+  border-bottom: 2px solid #f1c40f;
   margin-top: 8px;
 }
 
-/* قائمة الروابط (رأسية من اليمين لليسار) */
+/* قائمة الروابط */
 .footer-links ul {
   list-style: none;
   display: flex;
-  flex-direction: column;  /* عمودي */
-  align-items: flex-start; /* يبدأ من اليمين */
+  flex-direction: column;
+  align-items: flex-start;
   gap: 10px;
   padding: 0;
   margin: 0;
@@ -60,12 +60,11 @@
 }
 
 .footer-links a:hover {
-  color: #ff4757;
-  padding-right: 1px; 
-  text-shadow: 0 0 5px #ff4757;
+  color: #f1c40f;
+  text-shadow: 0 0 6px #f1c40f;
 }
 
-/* قسم الحقوق (Socket) */
+/* الحقوق */
 .footer-bottom {
   background: #0a0f2c; 
   color: #ccc;
