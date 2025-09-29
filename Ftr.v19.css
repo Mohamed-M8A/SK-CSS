@@ -102,12 +102,11 @@
 
 /* الحقوق */
 .footer-bottom {
-  background: #020608;
+  background: #020608 !important;
   color: #ccc;
   text-align: center;
   padding: 12px 10px;
   font-size: 8px !important;
-  border-top: 1px solid #111;
 }
 
 .footer-bottom p {
