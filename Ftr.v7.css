@@ -68,7 +68,7 @@
 /* سوشيال */
 .footer-social {
   display: grid !important;
-  grid-template-columns: repeat(3, 50px) !important;
+  grid-template-columns: repeat(2, 50px) !important;
   gap: 12px !important;
   justify-content: start !important;
 }
