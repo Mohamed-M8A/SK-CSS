@@ -67,7 +67,9 @@
 }
 
 .search-box-input::placeholder {
-  color: #666;
+  color: #6f7373;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .search-box-button {
