@@ -54,23 +54,22 @@
   color: #ddd;
   text-decoration: none;
   transition: all 0.3s ease;
-  font-size: 14px;
+  font-size: 15px;
   display: block;
   padding: 5px 0;
 }
 
 .footer-links a:hover {
   color: #f1c40f;
-  text-shadow: 0 0 6px #f1c40f;
 }
 
 /* الحقوق */
 .footer-bottom {
   background: #0a0f2c; 
-  color: #ccc;
+  color: #aaa;
   text-align: center;
   padding: 10px 10px;
-  font-size: 12px;
+  font-size: 10px;
   border-top: 1px solid #111;
 }
 .footer-bottom p {
