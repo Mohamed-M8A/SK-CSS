@@ -29,6 +29,7 @@
 /* ===========================
     شريط البحث 
 =========================== */
+/* =================== ✅ Search =================== */
 .search-container {
   padding: 0 10px;
   display: flex;
@@ -42,7 +43,17 @@
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 700px; 
+  max-width: 700px;
+  border: 1px solid #ccc;
+  border-radius: 6px; /* حواف ناعمة */
+  overflow: hidden;   /* عشان الزر والإنبوت يندمجوا جوه نفس الإطار */
+  transition: all 0.3s ease;
+}
+
+/* ✅ تأثير عند النقر */
+.search-box-form:focus-within {
+  border-color: #febd69;
+  box-shadow: 0 0 4px rgba(254, 189, 105, 0.6);
 }
 
 .input-wrapper {
@@ -53,7 +64,7 @@
   width: 100%;
   padding: 12px 18px;
   font-size: 15px;
-  border: 1px solid #ccc;
+  border: none; /* نشيل الحدود من الانبوت نفسه */
   outline: none;
   background-color: #fff;
   color: #111;
@@ -71,7 +82,7 @@
   color: #111;
   font-size: 15px;
   font-weight: 700;
-  border: 1px solid #febd69;
+  border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -81,7 +92,7 @@
 }
 
 .search-box-button:hover {
-  background: #f3a847; 
+  background: #f3a847;
 }
 
 .search-box-button .icon {
@@ -93,10 +104,9 @@
 /* ✅ متجاوب */
 @media (max-width: 768px) {
   .search-box-form {
-    max-width: 100%; 
+    max-width: 100%;
   }
 }
-
 /* ===========================
     دارك مود + كارت
 =========================== */
