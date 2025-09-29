@@ -18,7 +18,7 @@
 /* الصف */
 .footer-row {
   display: flex;
-  justify-content: flex-start; /* كله يبدأ من اليمين */
+  justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 60px;
@@ -70,9 +70,10 @@
 }
 
 .footer-social {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 18px; /* مسافة أفقية ورأسية */
+  display: grid !important;
+  grid-template-columns: repeat(2, auto);
+  gap: 12px 18px;
+  justify-content: start;
 }
 
 .footer-social a {
