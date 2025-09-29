@@ -1,0 +1,113 @@
+/* =========================
+   FOOTER STYLE
+========================= */
+#footer {
+  background: #000000; 
+  color: #ffffff !important;
+  direction: rtl; 
+  font-family: inherit;
+}
+
+/* الحاوية */
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+/* تقسيم الأعمدة */
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 100px;
+}
+
+/* العناوين */
+.footer-title {
+  text-transform: uppercase;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  color: #ffd700 !important;
+  margin-bottom: 15px !important;
+}
+.footer-title:after {
+  content: "";
+  display: block;
+  width: 60px;
+  border-bottom: 2px solid #ffd700;
+  margin-top: 8px;
+}
+
+/* روابط */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px !important;
+}
+
+.footer-links a {
+  color: #ddd !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  display: block !important;
+  padding: 5px 0 !important;
+}
+
+.footer-links a:hover {
+  color: #ffd700 !important; 
+  text-shadow: 0 0 5px #ffd700 !important;
+}
+
+/* سوشيال */
+.footer-social {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  gap: 10px;
+}
+
+.footer-social a {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: transparent !important;
+  color: #fff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 22px !important;   
+  transition: 0.3s ease !important;
+  text-decoration: none !important;
+}
+
+.footer-social a:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #ffd700 !important;
+}
+
+.footer-social svg {
+  width: 22px !important;
+  height: 22px !important;
+  display: block !important;
+  flex-shrink: 0 !important;
+  fill: currentColor !important; 
+}
+
+/* حقوق */
+.footer-bottom {
+  background: #0a0f2c; 
+  color: #ccc !important;
+  text-align: center !important;
+  padding: 10px 10px !important;
+  font-size: 10px !important;
+  border-top: 1px solid #111 !important;
+}
+.footer-bottom p {
+  margin: 0 !important;
+}
