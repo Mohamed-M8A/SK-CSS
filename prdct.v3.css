@@ -18,7 +18,7 @@
 }
 
 .product-title {
-  font-size: 24px !important;
+  font-size: 30px !important;
   font-weight: 600 !important;
   color: #3c4c66 !important;
   margin: 0 0 10px 0 !important;
@@ -28,7 +28,7 @@
 .short-description {
   color: #2d2d38;            
   font-style: normal;        
-  font-size: 12px;           
+  font-size: 20px;           
   letter-spacing: 0.5px;
   line-height: 1.5;
 }
