@@ -43,8 +43,8 @@
   align-items: center;
   width: 100%;
   max-width: 700px;
-  background: transparent;
-  border: none;  
+  background: #fff;
+  border: none;
   border-radius: 8px;
   overflow: hidden;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -102,7 +102,7 @@
 ========================= */
 @media (max-width: 768px) {
   .search-box-form {
-    max-width: 100%; 
+    max-width: 100%;  
   }
 }
 
