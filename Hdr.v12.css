@@ -27,16 +27,16 @@
 }
 
 /* ===========================
-   شريط البحث
+    شريط البحث 
 =========================== */
 .search-container {
+  position: relative;
   padding: 0 10px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex: 1;
   direction: rtl;
-  position: relative;
 }
 
 .search-box-form {
@@ -99,42 +99,44 @@
 }
 
 /* ===========================
-   Dropdown سجل البحث
+   دروب داون السجل
 =========================== */
-.dropdown {
+.search-history-dropdown {
   position: absolute;
-  top: 100%;
+  top: 100%; 
   right: 10px;
   left: 10px;
+  width: calc(100% - 20px);
   background: #fff;
-  border: 1px solid #ccc;
-  border-top: none;
-  max-height: 220px;
-  overflow-y: auto;
-  z-index: 1000;
-  display: none;
+  border: 1px solid #ddd;
   border-radius: 0 0 8px 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  max-height: 250px;
+  overflow-y: auto;
+  display: none;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.dropdown div {
-  padding: 10px;
+.search-history-dropdown div {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #333;
   cursor: pointer;
-  border-bottom: 1px solid #eee;
+  transition: background 0.2s;
 }
 
-.dropdown div:hover {
-  background: #f7f7f7;
+.search-history-dropdown div:hover {
+  background: #f3f3f3;
 }
 
-.delete-btn {
+.search-history-dropdown .delete-btn {
   color: red;
   font-weight: bold;
-  cursor: pointer;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 /* =========================
@@ -144,8 +146,13 @@
   .search-box-form {
     max-width: 100%;  
   }
-}
 
+  .search-history-dropdown {
+    right: 0;
+    left: 0;
+    width: 100%;
+  }
+}
 /* ===========================
     دارك مود + كارت
 =========================== */
