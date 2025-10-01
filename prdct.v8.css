@@ -634,10 +634,9 @@
 /* ============================
    ✅ الجدول
 ============================== */
-
 table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse; 
     text-align: right; 
     border: 1px solid #ccc;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
