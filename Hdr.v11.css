@@ -27,7 +27,7 @@
 }
 
 /* ===========================
-    شريط البحث 
+   شريط البحث
 =========================== */
 .search-container {
   padding: 0 10px;
@@ -36,6 +36,7 @@
   align-items: center;
   flex: 1;
   direction: rtl;
+  position: relative;
 }
 
 .search-box-form {
@@ -95,6 +96,45 @@
   width: 20px;
   height: 20px;
   fill: #111;
+}
+
+/* ===========================
+   Dropdown سجل البحث
+=========================== */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 10px;
+  left: 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  max-height: 220px;
+  overflow-y: auto;
+  z-index: 1000;
+  display: none;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.dropdown div {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown div:hover {
+  background: #f7f7f7;
+}
+
+.delete-btn {
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
 }
 
 /* =========================
