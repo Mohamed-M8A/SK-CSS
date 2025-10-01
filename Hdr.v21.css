@@ -106,9 +106,9 @@
 .search-history-dropdown {
   position: absolute;
   top: 100%; 
-  left: 10px;   /* مسافة من الشمال */
-  right: 60px;  /* مسافة من اليمين */
-  width: auto;  /* يتحدد تلقائي */
+  left: 10px;  
+  right: 60px;  
+  width: 100%; 
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 0 0 8px 8px;
