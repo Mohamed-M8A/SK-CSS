@@ -142,6 +142,7 @@
 
 /* زر الحذف (X) */
 .search-history-dropdown .delete-btn {
+  font-size: 15px;  
   color: #999; 
   font-weight: bold;
   margin-left: 8px;
@@ -150,7 +151,7 @@
 }
 
 .search-history-dropdown .delete-btn:hover {
-  color: #444;
+  color: #2f00ff;
 }
 
 /* =========================
