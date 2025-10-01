@@ -30,13 +30,13 @@
     شريط البحث 
 =========================== */
 .search-container {
-  position: relative; 
   padding: 0 10px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex: 1;
   direction: rtl;
+  position: relative;
 }
 
 .search-box-form {
@@ -49,6 +49,7 @@
   border-radius: 8px;
   overflow: hidden;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 
 .search-box-form:focus-within {
@@ -58,33 +59,34 @@
 
 .search-box-input {
   flex: 1;
-  padding: 12px 16px;
+  padding: 12px 18px;
   font-size: 15px;
   border: none;
   outline: none;
   background: transparent;
   color: #111;
-  height: 46px;
+  height: 48px;
+  autocomplete: off;
 }
 
 .search-box-input::placeholder {
   color: #6f7373;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .search-box-button {
-  padding: 12px 18px;
+  padding: 12px 22px;
   background: #febd69;
   color: #111;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 6px;
-  height: 46px;
+  height: 48px;
   transition: background 0.3s ease;
 }
 
@@ -93,53 +95,62 @@
 }
 
 .search-box-button .icon {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   fill: #111;
 }
 
 /* ===========================
-   دروب داون السجل
+   الدروب داون الخاص بالسجل
 =========================== */
 .search-history-dropdown {
   position: absolute;
-  top: 100%;
-  right: 10px;
-  left: 10px;
-  width: calc(100% - 20px); 
+  top: 100%; 
+  left: 0;
+  right: 0;
+  width: 100%; 
   background: #fff;
   border: 1px solid #ddd;
-  border-top: none;
   border-radius: 0 0 8px 8px;
-  max-height: 200px; 
+  max-height: 240px;
   overflow-y: auto;
-  display: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   z-index: 999999; 
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  display: none;
 }
 
 .search-history-dropdown div {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 14px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
   font-size: 14px;
   color: #333;
-  cursor: pointer;
-  height: 40px; 
-  transition: background 0.2s;
+  user-select: none; 
 }
 
 .search-history-dropdown div:hover {
-  background: #f9f9f9;
+  background: #f5f5f5;
 }
 
+/* النصوص داخل السجل */
+.search-history-dropdown span {
+  user-select: none; 
+}
+
+/* زر الحذف (X) */
 .search-history-dropdown .delete-btn {
-  color: red;
+  color: #999; 
   font-weight: bold;
-  margin-left: 10px;
+  margin-left: 8px;
   cursor: pointer;
-  font-size: 16px;
+  user-select: none; 
+}
+
+.search-history-dropdown .delete-btn:hover {
+  color: #444;
 }
 
 /* =========================
@@ -148,12 +159,6 @@
 @media (max-width: 768px) {
   .search-box-form {
     max-width: 100%;  
-  }
-
-  .search-history-dropdown {
-    right: 0;
-    left: 0;
-    width: 100%; 
   }
 }
 
