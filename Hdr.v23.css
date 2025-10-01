@@ -106,9 +106,9 @@
 .search-history-dropdown {
   position: absolute;
   top: 100%; 
-  left: 10px;  
-  right: 00px;  
-  width: 100%; 
+  left: -10px;  
+  right: 10px;  
+  width: 75%; 
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 0 0 8px 8px;
