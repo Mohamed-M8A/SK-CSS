@@ -137,12 +137,12 @@
 
 /* النصوص داخل السجل */
 .search-history-dropdown span {
-  color: #3300ff;   
+  color: #444;   
   user-select: none; 
 }
 
 .search-history-dropdown div:hover span {
-  color: #0051ff; 
+  color: #3200ba; 
 }
 
 /* زر الحذف (X) */
