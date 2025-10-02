@@ -136,7 +136,8 @@ hr {
   #post-body object,
   #post-body embed,
   #post-body video,
-  #post-body img:not(.thumbnail-container img):not(#mainImage):not(.profile-image):not(gif) {
+  #post-body gif, 
+  #post-body img:not(.thumbnail-container img):not(#mainImage):not(.profile-image) {
     width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
