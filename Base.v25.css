@@ -54,6 +54,12 @@ iframe { border: 0; }
   #main { min-height: 250px; }
 }
 
+/* ✅ البرايماري */
+.dark-mode #primary {
+  background-color: #181818;
+  color: #ffffff;
+  border: 1px solid #2c2c2c;
+}
 
 /* =========================
    ✅ TYPOGRAPHY
