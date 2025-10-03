@@ -770,34 +770,41 @@ display:none;
 }
 
 
-/* 📱 موبايل صغير جداً (أقل من 360px) */
+/* ============================
+   📱 موبايل صغير جداً
+============================ */
 @media (max-width: 360px) {
   .product-box { flex-direction: column; align-items: center; }
   .main-image-container { max-width: 100%; }
   .info-boxes-wrapper { grid-template-columns: 1fr; }
-  .buy-button, .add-to-cart { width: 100%; height: 46px; font-size: 15px; }
+  .buy-button, .add-to-cart { width: 100%; height: 44px; font-size: 15px; }
 }
 
-/* 📱 موبايل صغير (360px – 480px) */
+/* ============================
+   📱 موبايل عادي (360 - 480px)
+============================ */
 @media (min-width: 360px) and (max-width: 480px) {
   .product-box { flex-direction: column; align-items: center; }
   .main-image-container { max-width: 100%; }
   .info-boxes-wrapper { grid-template-columns: repeat(2, 1fr); }
-  .buy-button, .add-to-cart { width: 100%; height: 48px; font-size: 16px; }
+  .buy-button, .add-to-cart { width: 100%; height: 46px; font-size: 16px; }
   table { display: block; overflow-x: auto; white-space: nowrap; }
 }
 
-/* 📱 موبايل متوسط (480px – 540px) */
+/* ============================
+   📱 موبايل كبير (480 - 540px)
+============================ */
 @media (min-width: 480px) and (max-width: 540px) {
   .product-box { flex-direction: column; align-items: center; }
   .main-image-container { max-width: 100%; }
   .product-info { text-align: center; }
   .info-boxes-wrapper { grid-template-columns: repeat(2, 1fr); }
   .buy-button, .add-to-cart { width: 100%; }
-  table { display: block; overflow-x: auto; }
 }
 
-/* 📱 تصحيح خاص (540px – 600px) */
+/* ============================
+   📱📲 تصحيح خاص (540 - 600px)
+============================ */
 @media (min-width: 540px) and (max-width: 600px) {
   .product-box { flex-direction: column; align-items: center; }
   .main-image-container { max-width: 100%; }
@@ -807,7 +814,9 @@ display:none;
   table { display: block; overflow-x: auto; white-space: nowrap; }
 }
 
-/* 📱–💻 تابلت صغير (600px – 768px) */
+/* ============================
+   📲 تابلت صغير (600 - 768px)
+============================ */
 @media (min-width: 600px) and (max-width: 768px) {
   .product-box { flex-direction: row; flex-wrap: wrap; }
   .main-image-container { max-width: 50%; }
@@ -816,7 +825,9 @@ display:none;
   .buy-button, .add-to-cart { width: 48%; }
 }
 
-/* 💻 تابلت متوسط (768px – 992px) */
+/* ============================
+   📲 تابلت متوسط (768 - 992px)
+============================ */
 @media (min-width: 768px) and (max-width: 992px) {
   .product-box { flex-direction: row; }
   .main-image-container { max-width: 45%; }
@@ -825,24 +836,10 @@ display:none;
   .buy-button, .add-to-cart { width: 220px; }
 }
 
-/* 💻 لابتوب صغير (992px – 1200px) */
-@media (min-width: 992px) and (max-width: 1200px) {
-  .product-box { flex-direction: row; }
-  .main-image-container { max-width: 45%; }
-  .product-info { max-width: 55%; }
-  .info-boxes-wrapper { grid-template-columns: repeat(3, 1fr); }
-}
-
-/* 🖥️ ديسكتوب (أكبر من 1200px) */
-@media (min-width: 1200px) {
-  .product-box { flex-direction: row; }
-  .main-image-container { max-width: 40%; }
-  .product-info { max-width: 60%; }
-  .info-boxes-wrapper { grid-template-columns: repeat(3, 1fr); }
-}
-
-/* 📐 تصحيح للوضع الأفقي (landscape) في الموبايل */
-@media (max-width: 768px) and (orientation: landscape) {
+/* ============================
+   📐 الوضع الأفقي للموبايل/تابلت
+============================ */
+@media (max-width: 992px) and (orientation: landscape) {
   .product-box { flex-direction: row; flex-wrap: wrap; }
   .main-image-container { max-width: 50%; }
   .product-info { max-width: 50%; }
