@@ -63,6 +63,8 @@
   font-size: 15px;
   border: none;
   outline: none;
+  flex: 1;
+  min-width: 0;  
   background: transparent;
   color: #111;
   height: 48px;
@@ -81,6 +83,7 @@
   color: #111;
   font-size: 15px;
   font-weight: 600;
+  flex-shrink: 0; 
   border: none;
   cursor: pointer;
   display: flex;
