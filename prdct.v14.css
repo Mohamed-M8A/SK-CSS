@@ -865,13 +865,6 @@ display:none;
   color: #fff !important; 
 }
 
-/* ✅ البرايماري */
-.dark-mode #primary {
-  background-color: #181818;
-  color: #ffffff;
-  border: 1px solid #2c2c2c;
-}
-
 /* ✅ Product Box */
 .dark-mode .product-box {
   background-color: #1a1a1a;
