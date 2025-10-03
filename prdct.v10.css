@@ -770,10 +770,31 @@ display:none;
 }
 
 
-/* ============================
-   ✅ Responsive للتابلت (601px - 1024px)
-============================== */
-@media (min-width: 601px) and (max-width: 1024px) {
+/* 📱 الموبايل الصغير جداً (شاشات 0 - 480px) */
+@media (max-width: 480px) {
+  .button-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .buy-button,
+  .add-to-cart {
+    width: 100% !important;
+    font-size: 15px;
+    height: 45px;
+  }
+
+  .product-title {
+    font-size: 22px !important;
+  }
+
+  .info-boxes-wrapper {
+    grid-template-columns: 1fr; /* عمود واحد فقط */
+  }
+}
+
+/* 📱 الموبايل العادي (481px - 600px) */
+@media (min-width: 481px) and (max-width: 600px) {
   .button-container {
     flex-direction: column;
     align-items: stretch;
@@ -787,7 +808,10 @@ display:none;
   .info-boxes-wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
+}
 
+/* 📲 التابلت الصغير (601px - 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
   .product-box {
     flex-direction: column;
     align-items: center;
@@ -800,24 +824,93 @@ display:none;
   .product-info {
     width: 100%;
   }
-}
 
-/* ============================
-   ✅ Responsive للجوال (max-width: 600px)
-============================== */
-@media (max-width: 600px) {
-  .button-container {
-    flex-direction: column;
-    align-items: stretch;
+  .info-boxes-wrapper {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .buy-button,
   .add-to-cart {
     width: 100% !important;
   }
+}
+
+/* 💻 التابلت الكبير (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .product-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-image-container {
+    max-width: 80%;
+  }
+
+  .product-info {
+    width: 100%;
+  }
 
   .info-boxes-wrapper {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .buy-button,
+  .add-to-cart {
+    width: 80% !important;
+  }
+}
+
+/* 🖥️ اللابتوب الصغير (1025px - 1366px) */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .product-box {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .info-boxes-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 🖥️ اللابتوب الكبير / ديسكتوب (1367px - 1920px) */
+@media (min-width: 1367px) and (max-width: 1920px) {
+  .product-box {
+    gap: 30px;
+  }
+
+  .main-image-container {
+    max-width: 600px;
+  }
+
+  .product-title {
+    font-size: 32px !important;
+  }
+}
+
+/* 🖥️ شاشات 4K (1921px فما فوق) */
+@media (min-width: 1921px) {
+  .product-box {
+    gap: 50px;
+    max-width: 1600px;
+    margin: auto;
+  }
+
+  .main-image-container {
+    max-width: 700px;
+  }
+
+  .product-title {
+    font-size: 36px !important;
+  }
+
+  .info-boxes-wrapper {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
