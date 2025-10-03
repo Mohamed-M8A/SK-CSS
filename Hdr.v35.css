@@ -39,22 +39,6 @@
   position: relative;
 }
 
-/* ===========================
-   Search Container
-=========================== */
-.search-container {
-  padding: 0 10px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex: 1;
-  direction: rtl;
-  position: relative;
-}
-
-/* ===========================
-   Search Box Form
-=========================== */
 .search-box-form {
   display: flex;
   align-items: center;
@@ -118,7 +102,7 @@
 }
 
 /* ===========================
-   Search History Dropdown
+   الدروب داون الخاص بالسجل
 =========================== */
 .search-history-dropdown {
   position: absolute;
@@ -174,9 +158,9 @@
   color: #ff0000;
 }
 
-/* ===========================
+/* =========================
    Responsive
-=========================== */
+========================= */
 @media (max-width: 768px) {
   .search-box-form {
     max-width: 100%;  
@@ -188,16 +172,20 @@
   }
 
   .search-box-button {
-    padding: 10px 16px;
+    padding: 10px 14px; 
     font-size: 14px;
     height: 44px;
   }
 }
 
 @media (max-width: 480px) {
+  .search-box-form {
+    gap: 6px; /* تعديل بسيط يخلي الزر يفضل مظبوط */
+  }
+
   .search-box-input {
     font-size: 13px;
-    padding: 8px 10px;
+    padding: 9px 10px;
   }
 
   .search-box-button {
