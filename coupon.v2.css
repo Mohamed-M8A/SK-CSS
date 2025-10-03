@@ -1,5 +1,5 @@
 /* ============================
-   ✅  كوبون الخصم الاساسي
+   ✅ كوبون الخصم الاساسي
 ============================== */
 .coupons-wrapper {
   display: flex;
@@ -162,6 +162,51 @@
 }
 
 /* ============================
+   🌙 دارك مود للكوبونات
+============================== */
+.dark-mode .coupon-card {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  box-shadow: 0 4px 12px rgba(0,0,0,.4);
+}
+
+.dark-mode .coupon-image {
+  background: #2a2a2a;
+  border: 1px solid #444;
+}
+
+.dark-mode .coupon-title {
+  color: #eee;
+}
+
+.dark-mode .coupon-description {
+  color: #bbb;
+}
+
+.dark-mode .coupon-expiry {
+  color: #9a91ff;
+}
+
+.dark-mode .coupon-code-box {
+  background: #2a2a2a;
+  border: 1px dashed #9a91ff;
+}
+
+.dark-mode .coupon-code {
+  color: #fff;
+}
+
+.dark-mode .btn-offer {
+  background: #eee;
+  color: #111;
+}
+
+.dark-mode .btn-offer:hover {
+  background: #333;
+  color: #fff;
+  border-color: #eee;
+}
+/* ============================
    ✅ كوبون الخصم
 ============================== */
 
@@ -211,6 +256,23 @@
 
 .copy-button:active {
     background-color: #473fb8;
+}
+
+/* 🌙 دارك مود للكوبون */
+.dark-mode .coupon-container {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+}
+.dark-mode .coupon-code {
+  background-color: #2a2a2a;
+  color: #eee;
+}
+.dark-mode .copy-button {
+  background-color: #4fc3f7;
+  color: #000;
+}
+.dark-mode .copy-button:hover {
+  background-color: #29b6f6;
 }
 
 @media (max-width: 600px) {
