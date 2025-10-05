@@ -19,7 +19,7 @@
     اللوجو
 =========================== */
 .logo img {
-  max-height: 35px; 
+  max-height: 50px; 
   width: auto;
   height: auto;
   object-fit: contain;
