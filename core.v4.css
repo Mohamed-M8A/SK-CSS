@@ -9,7 +9,7 @@
 
 /* بطاقة المنتج */
 .post-card {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
@@ -32,29 +32,20 @@
   width: 100%;
   padding-top: 100%;
   overflow: hidden;
-  background: linear-gradient(135deg, #f1f1f1, #eaeaea);
+  background: #f3f3f3;
 }
 .post-image {
   position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+  opacity: 1;
 }
 .post-card:hover .post-image {
-  transform: scale(1.06);
-}
-
-/* في حال غياب الصورة */
-.image-container::before {
-  content: "🖼️";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 40px;
-  color: #bbb;
-  opacity: 0.5;
+  transform: scale(1.05);
+  opacity: 0.95;
 }
 
 /* شارة الخصم */
@@ -63,7 +54,7 @@
   top: 10px;
   right: 10px;
   background: linear-gradient(135deg, #ffcc00, #ff9100);
-  color: #000;
+  color: #111;
   padding: 6px 10px;
   border-radius: 8px;
   font-size: 12px;
@@ -76,8 +67,8 @@
 /* زر العربة */
 .external-cart-button {
   position: absolute;
-  bottom: 12px;
-  right: 12px;
+  bottom: 10px;
+  right: 10px;
   background: #fff;
   color: #000;
   border-radius: 50%;
@@ -92,7 +83,7 @@
   cursor: pointer;
 }
 .external-cart-button:hover {
-  background: linear-gradient(135deg, #007bff, #00c6ff);
+  background: linear-gradient(135deg, #000, #333);
   color: #fff;
 }
 
@@ -144,14 +135,38 @@
   margin-top: auto;
 }
 
+/* زر عرض المزيد */
+#load-more {
+  background: linear-gradient(135deg, #000, #333);
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 30px auto;
+  display: block;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+#load-more:hover {
+  background: linear-gradient(135deg, #222, #666);
+  transform: translateY(-2px);
+}
+
 /* الوضع الداكن */
 .dark-mode .post-card {
-  background: rgba(30, 30, 30, 0.9);
-  color: #ddd;
-  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.7);
+  background: rgba(30, 30, 30, 0.95);
+  color: #f1f1f1;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.6);
 }
+.dark-mode .post-title { color: #f9f9f9; }
+.dark-mode .discounted-price { color: #4caf50; }
+.dark-mode .original-price { color: #aaa; }
+.dark-mode .product-meta-details { border-color: #333; color: #ccc; }
 .dark-mode .discount-badge {
-  background: linear-gradient(135deg, #ffb300, #ff9100);
+  background: linear-gradient(135deg, #ffc107, #ff9800);
   color: #111;
 }
 .dark-mode .external-cart-button {
@@ -161,12 +176,12 @@
 .dark-mode .external-cart-button:hover {
   background: linear-gradient(135deg, #00b4d8, #0077b6);
 }
-.dark-mode .discounted-price {
-  color: #4caf50;
+.dark-mode #load-more {
+  background: linear-gradient(135deg, #222, #444);
+  color: #fff;
 }
-.dark-mode .product-meta-details {
-  border-color: #333;
-  color: #bbb;
+.dark-mode #load-more:hover {
+  background: linear-gradient(135deg, #333, #666);
 }
 
 /* Responsive */
