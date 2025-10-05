@@ -12,6 +12,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 40px;
+  min-height: 50px;  
   flex-wrap: wrap;
 }
 
@@ -46,7 +47,7 @@
   max-width: 700px;
   background: #fff;
   border: none;
-  border-radius: 8px;
+  border-radius: 4px;
   overflow: hidden;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   position: relative;
@@ -67,7 +68,7 @@
   min-width: 0;  
   background: transparent;
   color: #111;
-  height: 38px;
+  height: 45px;
   autocomplete: off;
 }
 
@@ -89,7 +90,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  height: 38px;
+  height: 45px;
   transition: background 0.3s ease;
 }
 
