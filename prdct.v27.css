@@ -624,22 +624,21 @@ table {
   width: 100%;
   border-collapse: collapse;
   text-align: right;
-  border: 1px solid #ccc;
+  border: 1px solid #bbb;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin: 20px 0;
-  font-family: 'Cairo', sans-serif;
   direction: rtl;
   background: #fff;
-  table-layout: fixed; /* ✅ بيخلي الأعمدة تتأقلم حسب المحتوى */
+  table-layout: fixed;
   word-wrap: break-word;
-  white-space: normal; /* ✅ يسمح للنص ينزل سطر تاني */
+  white-space: normal; 
 }
 
 th, td {
-  border: 1px solid #ddd;
+  border: 1px solid #bbb;
   padding: 12px 10px;
   vertical-align: middle;
-  word-break: break-word; /* ✅ يكسر الكلمات الطويلة */
+  word-break: break-word;
 }
 
 th {
@@ -683,7 +682,7 @@ tr:hover {
     line-height: 1.5;
     white-space: normal;
     word-break: break-word;
-    min-width: 10px;
+    min-width: 110px;
   }
 
   tr:hover {
