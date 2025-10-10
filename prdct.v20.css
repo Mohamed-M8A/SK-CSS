@@ -552,19 +552,16 @@
 .tab-buttons {
   text-align: center;
   margin-bottom: 15px;
-  position: sticky !important;
-  top: 0 !important;
-  z-index: 9999 !important;
-  background-color: #fff !important;
-  padding: 10px 0 !important;
-  border-bottom: 1px solid #ddd !important;
-
-  /* ✅ إصلاح مشكلة عدم التثبيت */
-  overflow: visible !important;
-  isolation: unset !important;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background-color: #fff;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  isolation: isolate; /* مهم علشان sticky يشتغل */
 }
 
-/* أزرار التابات */
+/* ✅ أزرار التابات */
 .tab-buttons button {
   background: none;
   border: none;
@@ -586,16 +583,16 @@
   border-bottom: 2px solid #000;
 }
 
-/* موبايل */
+/* ✅ عرض الموبايل */
 @media (max-width: 768px) {
   .tab-buttons {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    position: sticky !important;
-    top: 0 !important;
-    z-index: 9999 !important;
-    background-color: #fff !important;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 9999;
   }
 
   .tab-buttons button {
@@ -614,6 +611,11 @@
     border-color: #999;
     font-weight: bold;
   }
+}
+
+/* ✅ إصلاح مشكلة الـ sticky مع overflow */
+body, html, #primary, #main, #main-content {
+  overflow: visible !important;
 }
 /* ============================
    ✅ الجدول
