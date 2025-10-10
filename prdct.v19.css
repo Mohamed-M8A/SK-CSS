@@ -552,16 +552,16 @@
 .tab-buttons {
   text-align: center;
   margin-bottom: 15px;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  background-color: #fff;
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 9999 !important;
+  background-color: #fff !important;
+  padding: 10px 0 !important;
+  border-bottom: 1px solid #ddd !important;
 
-  /* ✅ استثناء من overflow الخاص بالـ body */
-  isolation: isolate;
+  /* ✅ إصلاح مشكلة عدم التثبيت */
   overflow: visible !important;
+  isolation: unset !important;
 }
 
 /* أزرار التابات */
@@ -592,6 +592,10 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+    background-color: #fff !important;
   }
 
   .tab-buttons button {
