@@ -625,21 +625,24 @@ table {
   border-collapse: collapse;
   text-align: right;
   border: 1px solid #ccc;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   margin: 20px 0;
   font-family: 'Cairo', sans-serif;
   direction: rtl;
   background: #fff;
-  table-layout: fixed; /* ✅ بيخلي الأعمدة تتأقلم حسب المحتوى */
+
+  /* ✅ توزيع ذكي للأعمدة */
+  table-layout: auto;
   word-wrap: break-word;
-  white-space: normal; /* ✅ يسمح للنص ينزل سطر تاني */
+  white-space: normal;
 }
 
 th, td {
   border: 1px solid #ddd;
   padding: 12px 10px;
   vertical-align: middle;
-  word-break: break-word; /* ✅ يكسر الكلمات الطويلة */
+  line-height: 1.6;
+  word-break: break-word;
 }
 
 th {
@@ -647,16 +650,15 @@ th {
   font-size: 16px;
   color: #333;
   font-weight: 600;
-  line-height: 1.4;
 }
 
 td {
   font-size: 15px;
-  line-height: 1.6;
 }
 
+/* ✅ تلوين ذكي */
 tr:hover {
-  background-color: #ddeaeb;
+  background-color: #eef7f8;
 }
 
 .green {
@@ -669,24 +671,48 @@ tr:hover {
   font-weight: bold;
 }
 
-/* ✅ تحسينات للجوال */
+/* ✅ الأعمدة الرقمية تكون أضيق تلقائيًا */
+th:nth-child(n):has(span),
+td:nth-child(n):has(.price),
+td:nth-child(n):has(.amount),
+td:nth-child(n):has(.number),
+td:nth-child(n):has(.quantity) {
+  width: 1%;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* ✅ تحسين التصميم على الشاشات الصغيرة */
 @media (max-width: 768px) {
   table {
-    font-size: 14px;
+    width: 100%;
     border: 1px solid #eee;
     box-shadow: none;
+    table-layout: fixed; /* ✅ يحافظ على اتزان العرض */
   }
 
   th, td {
     font-size: 13px;
     padding: 8px 6px;
     line-height: 1.5;
-    white-space: normal; /* ✅ يخلي النص يلتف داخل الخلية */
-    word-break: break-word;
+    white-space: normal; /* ✅ يسمح بالنزول للسطر التاني */
+  }
+
+  /* الأعمدة اللي فيها نصوص طويلة */
+  th:first-child,
+  td:first-child {
+    width: 100%; /* ✅ تديها أولوية في التمدد */
+  }
+
+  /* الأعمدة الرقمية */
+  th:last-child,
+  td:last-child {
+    width: auto;
+    text-align: center;
   }
 
   tr:hover {
-    background-color: #f5f5f5;
+    background-color: #f7f7f7;
   }
 }
 
@@ -699,8 +725,10 @@ tr:hover {
 
   table {
     border: 1px solid #ddd;
+    box-shadow: none;
   }
 }
+
 
 /* ============================
    ✅ الرسم البياني
