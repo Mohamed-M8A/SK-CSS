@@ -630,23 +630,29 @@ table {
   font-family: 'Cairo', sans-serif;
   direction: rtl;
   background: #fff;
+  table-layout: fixed; /* ✅ بيخلي الأعمدة تتأقلم حسب المحتوى */
+  word-wrap: break-word;
+  white-space: normal; /* ✅ يسمح للنص ينزل سطر تاني */
 }
 
-/* خلايا الجدول */
 th, td {
   border: 1px solid #ddd;
   padding: 12px 10px;
-  white-space: nowrap;
+  vertical-align: middle;
+  word-break: break-word; /* ✅ يكسر الكلمات الطويلة */
 }
 
 th {
   background-color: #f9f9f9;
   font-size: 16px;
   color: #333;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 td {
   font-size: 15px;
+  line-height: 1.6;
 }
 
 tr:hover {
@@ -663,52 +669,36 @@ tr:hover {
   font-weight: bold;
 }
 
-/* ✅ ✅ Responsive Mode */
+/* ✅ تحسينات للجوال */
 @media (max-width: 768px) {
   table {
-    border: 0;
+    font-size: 14px;
+    border: 1px solid #eee;
     box-shadow: none;
   }
 
-  table thead {
-    display: none;
+  th, td {
+    font-size: 13px;
+    padding: 8px 6px;
+    line-height: 1.5;
+    white-space: normal; /* ✅ يخلي النص يلتف داخل الخلية */
+    word-break: break-word;
   }
 
-  table tr {
-    display: block;
-    margin-bottom: 15px;
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+}
+
+/* ✅ في الشاشات الصغيرة جدًا */
+@media (max-width: 480px) {
+  th, td {
+    font-size: 12px;
+    padding: 6px 5px;
+  }
+
+  table {
     border: 1px solid #ddd;
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-    overflow: hidden;
-  }
-
-  table td {
-    display: block;
-    text-align: left;
-    font-size: 14px;
-    border-bottom: 1px solid #eee;
-    padding: 10px;
-    position: relative;
-  }
-
-  table td:last-child {
-    border-bottom: 0;
-  }
-
-  /* ✅ نعرض اسم العمود كـ label فوق كل قيمة */
-  table td::before {
-    content: attr(data-label);
-    font-weight: bold;
-    display: block;
-    color: #333;
-    margin-bottom: 6px;
-  }
-
-  table td.green, 
-  table td.red {
-    text-align: center;
   }
 }
 
