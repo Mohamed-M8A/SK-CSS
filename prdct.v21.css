@@ -558,7 +558,7 @@
   background-color: #fff;
   padding: 10px 0;
   border-bottom: 1px solid #ddd;
-  isolation: isolate; /* مهم علشان sticky يشتغل */
+  isolation: isolate;
 }
 
 /* ✅ أزرار التابات */
@@ -621,43 +621,95 @@ body, html, #primary, #main, #main-content {
    ✅ الجدول
 ============================== */
 table {
-    width: 100%;
-    border-collapse: collapse; 
-    text-align: right; 
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
-    font-family: 'Cairo', sans-serif;
-    direction: rtl;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: right;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  background: #fff;
 }
 
+/* خلايا الجدول */
 th, td {
-    border: 1px solid #ddd;
-    padding: 12px 10px;
+  border: 1px solid #ddd;
+  padding: 12px 10px;
+  white-space: nowrap;
 }
 
 th {
-    background-color: #f9f9f9;
-    font-size: 16px;
-    color: #333;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  color: #333;
 }
 
 td {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 tr:hover {
-    background-color: #ddeaeb;
+  background-color: #ddeaeb;
 }
 
 .green {
-    color: #2e7d32; 
-    font-weight: bold;
+  color: #2e7d32;
+  font-weight: bold;
 }
 
 .red {
-    color: #c62828; 
+  color: #c62828;
+  font-weight: bold;
+}
+
+/* ✅ ✅ Responsive Mode */
+@media (max-width: 768px) {
+  table {
+    border: 0;
+    box-shadow: none;
+  }
+
+  table thead {
+    display: none;
+  }
+
+  table tr {
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    overflow: hidden;
+  }
+
+  table td {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    position: relative;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+
+  /* ✅ نعرض اسم العمود كـ label فوق كل قيمة */
+  table td::before {
+    content: attr(data-label);
     font-weight: bold;
+    display: block;
+    color: #333;
+    margin-bottom: 6px;
+  }
+
+  table td.green, 
+  table td.red {
+    text-align: center;
+  }
 }
 
 /* ============================
