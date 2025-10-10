@@ -549,21 +549,17 @@
 /* ============================
    ✅ تبويبات الصفحة
 ============================== */
-
 .tab-buttons {
   text-align: center;
   margin-bottom: 15px;
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
+  z-index: 10;
   background-color: #fff;
   padding: 10px 0;
   border-bottom: 1px solid #ddd;
 }
 
-/* الشكل الأساسي: ديسكتوب */
 .tab-buttons button {
   background: none;
   border: none;
