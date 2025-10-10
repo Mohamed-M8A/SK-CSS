@@ -681,8 +681,9 @@ tr:hover {
     font-size: 13px;
     padding: 8px 6px;
     line-height: 1.5;
-    white-space: normal; /* ✅ يخلي النص يلتف داخل الخلية */
+    white-space: normal;
     word-break: break-word;
+    min-width: 110px;
   }
 
   tr:hover {
