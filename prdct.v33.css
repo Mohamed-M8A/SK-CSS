@@ -684,8 +684,7 @@ tr:hover {
     line-height: 1.5;
     white-space: normal;
     word-break: break-word;
-    min-width: 80px;
-    max-width: 220px;
+    min-width: 110px; 
   }
 
   tr:hover {
@@ -697,8 +696,6 @@ tr:hover {
   th, td {
     font-size: 12px;
     padding: 6px 5px;
-    min-width: 70px;
-    max-width: 150px;
   }
 
   table {
