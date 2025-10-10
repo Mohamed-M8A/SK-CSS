@@ -682,7 +682,6 @@ tr:hover {
     line-height: 1.5;
     white-space: normal;
     word-break: break-word;
-    min-width: 110px;
   }
 
   tr:hover {
