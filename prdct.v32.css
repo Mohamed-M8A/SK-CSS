@@ -629,9 +629,9 @@ table {
   margin: 20px 0;
   direction: rtl;
   background: #fff;
-  table-layout: fixed;
+  table-layout: auto;
   word-wrap: break-word;
-  white-space: normal; 
+  white-space: normal;
 }
 
 th, td {
@@ -639,6 +639,8 @@ th, td {
   padding: 12px 10px;
   vertical-align: middle;
   word-break: break-word;
+  min-width: 90px;
+  max-width: 350px;
 }
 
 th {
@@ -668,12 +670,12 @@ tr:hover {
   font-weight: bold;
 }
 
-/* ✅ تحسينات للجوال */
 @media (max-width: 768px) {
   table {
     font-size: 14px;
     border: 1px solid #eee;
     box-shadow: none;
+    table-layout: fixed;
   }
 
   th, td {
@@ -682,6 +684,8 @@ tr:hover {
     line-height: 1.5;
     white-space: normal;
     word-break: break-word;
+    min-width: 80px;
+    max-width: 220px;
   }
 
   tr:hover {
@@ -689,11 +693,12 @@ tr:hover {
   }
 }
 
-/* ✅ في الشاشات الصغيرة جدًا */
 @media (max-width: 480px) {
   th, td {
     font-size: 12px;
     padding: 6px 5px;
+    min-width: 70px;
+    max-width: 150px;
   }
 
   table {
