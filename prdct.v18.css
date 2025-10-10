@@ -554,16 +554,14 @@
   margin-bottom: 15px;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 999;
   background-color: #fff;
   padding: 10px 0;
   border-bottom: 1px solid #ddd;
-}
 
-/* نخلي أول عنصر بعد seller-bar (اللي هو مكان التابات فعليًا) بيئة استيكي */
-#seller-bar ~ .tab-buttons {
-  position: sticky;
-  top: 0;
+  /* ✅ استثناء من overflow الخاص بالـ body */
+  isolation: isolate;
+  overflow: visible !important;
 }
 
 /* أزرار التابات */
@@ -588,6 +586,7 @@
   border-bottom: 2px solid #000;
 }
 
+/* موبايل */
 @media (max-width: 768px) {
   .tab-buttons {
     display: flex;
@@ -612,7 +611,6 @@
     font-weight: bold;
   }
 }
-
 /* ============================
    ✅ الجدول
 ============================== */
