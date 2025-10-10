@@ -560,6 +560,13 @@
   border-bottom: 1px solid #ddd;
 }
 
+/* نخلي أول عنصر بعد seller-bar (اللي هو مكان التابات فعليًا) بيئة استيكي */
+#seller-bar ~ .tab-buttons {
+  position: sticky;
+  top: 0;
+}
+
+/* أزرار التابات */
 .tab-buttons button {
   background: none;
   border: none;
