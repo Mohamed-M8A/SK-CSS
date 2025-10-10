@@ -695,7 +695,7 @@ tr:hover {
   th, td {
     font-size: 12px;
     padding: 6px 5px;
-    min-width: 110px; 
+    min-width: 60px; 
   }
 
   table {
