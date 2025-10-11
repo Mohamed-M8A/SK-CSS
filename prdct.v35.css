@@ -822,13 +822,52 @@ display:none;
 }
 
 /* ============================
-   📱 جميع الأجهزة لحد 992px (جوال + تابلت)
+   📱 موبايل صغير جداً
 ============================ */
-@media (max-width: 992px) {
-  .product-box { flex-direction: column; align-items: center; flex-wrap: nowrap; }
-  .main-image-container { max-width: 100%; }
+@media (max-width: 360px) {
+  .product-box { flex-direction: column; align-items: center; }
+  .info-boxes-wrapper { grid-template-columns: 1fr; }
+  .buy-button, .add-to-cart { width: 100%; height: 44px; font-size: 15px; }
+}
+
+/* ============================
+   📱 موبايل عادي (360 - 480px)
+============================ */
+@media (min-width: 360px) and (max-width: 480px) {
+  .product-box { flex-direction: column; align-items: center; }
+  .info-boxes-wrapper { grid-template-columns: repeat(2, 1fr); }
+  .buy-button, .add-to-cart { width: 100%; height: 46px; font-size: 16px; }
+  /* نحافظ على الجدول كما هو */
+}
+
+/* ============================
+   📱 موبايل كبير (480 - 540px)
+============================ */
+@media (min-width: 480px) and (max-width: 540px) {
+  .product-box { flex-direction: column; align-items: center; }
+  .product-info { text-align: center; }
+  .info-boxes-wrapper { grid-template-columns: repeat(2, 1fr); }
+  .buy-button, .add-to-cart { width: 100%; }
+}
+
+/* ============================
+   📱📲 تصحيح خاص (540 - 600px)
+============================ */
+@media (min-width: 540px) and (max-width: 600px) {
+  .product-box { flex-direction: column; align-items: center; }
   .product-info { width: 100%; text-align: center; }
-  .info-boxes-wrapper { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); gap: 12px; }
+  .info-boxes-wrapper { grid-template-columns: repeat(2, 1fr); }
+  .buy-button, .add-to-cart { width: 100% !important; font-size: 16px; height: 48px; }
+  /* الجدول لا يُمس 👑 */
+}
+
+/* ============================
+   📲 مظهر موحد للجوال والتابلت (600 - 992px)
+============================ */
+@media (min-width: 600px) and (max-width: 992px) {
+  .product-box { flex-direction: column; align-items: center; flex-wrap: nowrap; }
+  .product-info { width: 100%; text-align: center; }
+  .info-boxes-wrapper { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
   .buy-button, .add-to-cart { width: 100% !important; height: 46px; font-size: 16px; }
   .price-box { align-items: center; }
   .short-description { text-align: center; }
@@ -837,38 +876,13 @@ display:none;
 }
 
 /* ============================
-   📱 موبايل صغير جداً
-============================ */
-@media (max-width: 360px) {
-  .info-boxes-wrapper { grid-template-columns: 1fr; }
-  .buy-button, .add-to-cart { height: 44px; font-size: 15px; }
-}
-
-/* ============================
-   📱 موبايل عادي (360 - 480px)
-============================ */
-@media (min-width: 360px) and (max-width: 480px) {
-  .info-boxes-wrapper { grid-template-columns: repeat(2, 1fr); }
-  table { display: block; overflow-x: auto; white-space: nowrap; }
-}
-
-/* ============================
-   📱 موبايل كبير (480 - 600px)
-============================ */
-@media (min-width: 480px) and (max-width: 600px) {
-  .info-boxes-wrapper { grid-template-columns: repeat(2, 1fr); }
-  .buy-button, .add-to-cart { height: 48px; }
-  table { display: block; overflow-x: auto; white-space: nowrap; }
-}
-
-/* ============================
-   📐 الوضع الأفقي للموبايل/تابلت
+   📲 الوضع الأفقي للموبايل/تابلت
 ============================ */
 @media (max-width: 992px) and (orientation: landscape) {
   .product-box { flex-direction: column; align-items: center; }
-  .main-image-container { max-width: 100%; }
   .product-info { width: 100%; text-align: center; }
   .info-boxes-wrapper { grid-template-columns: repeat(2, 1fr); }
+  .buy-button, .add-to-cart { width: 100%; }
 }
 
 /* ============================
@@ -876,7 +890,6 @@ display:none;
 ============================ */
 @media (min-width: 992px) {
   .product-box { flex-direction: row; align-items: flex-start; flex-wrap: nowrap; }
-  .main-image-container { max-width: 45%; }
   .product-info { max-width: 55%; text-align: start; }
   .info-boxes-wrapper { grid-template-columns: repeat(3, 1fr); }
   .buy-button, .add-to-cart { width: 220px; }
@@ -1057,24 +1070,6 @@ display:none;
 .dark-mode .modal .close:hover {
   background-color: #fff;
   color: #000;
-}
-
-/* ✅ Buttons */
-.dark-mode .buy-button {
-  background-color: #e50926; 
-  color: #fff !important;
-}
-.dark-mode .buy-button:hover {
-  background-color: #b1001c;
-  color: #fff !important;
-}
-.dark-mode .add-to-cart {
-  background-color: #0a0a8f; 
-  color: #fff !important;
-}
-.dark-mode .add-to-cart:hover {
-  background-color: #05055a; 
-  color: #fff !important;
 }
 
 /* ✅ Chart Tooltip */
