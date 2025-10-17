@@ -410,19 +410,21 @@
   background-color: #ef6c00;
 }
 
-/* ============================
-   ✅ تقييم المنتج
-============================== */
+/* ===================================================
+   ✅ تقييم المنتج + تقييم العملاء (نسخة موحدة ومحسّنة)
+=================================================== */
 
 .rating-strip {
   display: flex;
   align-items: center;
   gap: 6px;
+  direction: rtl;
 }
 
 .stars-group {
   display: flex;
   direction: rtl;
+  align-items: center;
 }
 
 .star {
@@ -432,6 +434,12 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.star:hover {
+  transform: scale(1.15);
+  opacity: 0.9;
 }
 
 .star.half {
@@ -448,8 +456,8 @@
 }
 
 .rating-value {
-  font-size: 14px !important;
-  font-weight: bold;
+  font-size: 15px !important;
+  font-weight: 700;
   color: #000;
   margin-left: 4px;
 }
@@ -457,17 +465,20 @@
 .divider {
   font-size: 18px !important;
   margin: 0 6px;
-  color: #000;
+  color: #999;
 }
 
 .rating-count {
   font-size: 14px !important;
-  color: #000;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s ease;
 }
 
-/* ============================
-   ✅ تقييم العملاء
-============================== */
+.rating-count:hover {
+  color: #6c63ff;
+  text-decoration: underline;
+}
 
 .Customer-Reviews {
   background: #fff;
@@ -494,6 +505,12 @@
   margin-bottom: 30px;
   padding-bottom: 20px;
   border-bottom: 1px solid #eee;
+  transition: background 0.2s ease;
+}
+
+.Customer-Reviews .review:hover {
+  background: #fafafa;
+  border-radius: 12px;
 }
 
 .Customer-Reviews .review:last-child {
@@ -507,6 +524,7 @@
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
+  border: 2px solid #eee;
 }
 
 .Customer-Reviews .info {
@@ -516,18 +534,6 @@
   gap: 4px;
 }
 
-.Customer-Reviews strong {
-  font-size: 18px;
-  color: #333;
-}
-
-.Customer-Reviews p {
-  font-size: 16px;
-  color: #444;
-  line-height: 1.6;
-  margin: 0;
-}
-
 .Customer-Reviews .more-reviews-link {
   text-align: center;
   margin-top: 30px;
@@ -535,16 +541,19 @@
 
 .Customer-Reviews .more-reviews-link a {
   display: inline-block;
-  background-color: #6c63ff
-;
-  color: #000;
+  background-color: #6c63ff;
+  color: #fff;
   font-weight: bold;
-  padding: 10px 20px;
+  padding: 10px 25px;
+  border-radius: 30px;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .Customer-Reviews .more-reviews-link a:hover {
   background-color: #554bdd;
+  transform: translateY(-2px);
 }
+
 
 /* ============================
    ✅ تبويبات الصفحة
