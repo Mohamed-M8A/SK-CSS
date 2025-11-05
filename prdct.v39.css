@@ -417,100 +417,102 @@
 .rating-strip {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   direction: rtl;
+  font-family: "Poppins", "Cairo", sans-serif;
 }
 
 .stars-group {
   display: flex;
   direction: rtl;
   align-items: center;
+  gap: 3px;
 }
 
 .star {
-  font-size: 25px !important;
-  color: transparent;
-  background: #ffc50a;
+  font-size: 26px;
+  background: linear-gradient(90deg, #ffd700, #ffae00);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: transform 0.25s ease, filter 0.25s ease;
+  cursor: pointer;
 }
 
 .star:hover {
-  transform: scale(1.15);
-  opacity: 0.9;
+  transform: scale(1.25) rotate(-5deg);
+  filter: drop-shadow(0 0 4px rgba(255, 193, 7, 0.6));
 }
 
 .star.half {
-  background: linear-gradient(to left, #ffc50a 50%, #e0e0e0 50%);
-  background-clip: text;
+  background: linear-gradient(to left, #ffd700 50%, #e5e5e5 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .star.empty {
-  background: #e0e0e0;
+  background: #dcdcdc;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .rating-value {
-  font-size: 15px !important;
+  font-size: 16px;
   font-weight: 700;
-  color: #000;
-  margin-left: 4px;
+  color: #222;
 }
 
 .divider {
-  font-size: 18px !important;
-  margin: 0 6px;
-  color: #999;
+  color: #aaa;
+  font-size: 18px;
 }
 
 .rating-count {
-  font-size: 14px !important;
-  color: #333;
+  font-size: 14px;
+  color: #666;
   cursor: pointer;
-  transition: color 0.2s ease;
+  transition: color 0.25s ease;
 }
 
 .rating-count:hover {
-  color: #0c00c9;
+  color: #5a4fff;
   text-decoration: underline;
 }
 
 .Customer-Reviews {
-  background: #fff;
-  border-radius: 16px;
-  padding: 30px;
-  margin-top: 40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 35px;
+  margin-top: 45px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
   direction: rtl;
 }
 
 .Customer-Reviews h3 {
-  font-size: 28px;
-  font-weight: bold;
-  color: #1a1a1a;
-  border-bottom: 2px solid #eee;
+  font-size: 26px;
+  font-weight: 800;
+  color: #141414;
+  border-bottom: 2px solid #f1f1f1;
   padding-bottom: 15px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
+  letter-spacing: -0.5px;
 }
 
 .Customer-Reviews .review {
   display: flex;
   align-items: flex-start;
   gap: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   padding-bottom: 20px;
   border-bottom: 1px solid #eee;
-  transition: background 0.2s ease;
+  border-radius: 14px;
+  transition: all 0.3s ease;
 }
 
 .Customer-Reviews .review:hover {
-  background: #fafafa;
-  border-radius: 12px;
+  background: #f9f9ff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.08);
 }
 
 .Customer-Reviews .review:last-child {
@@ -519,39 +521,42 @@
 }
 
 .Customer-Reviews .reviewer-img {
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
-  border: 2px solid #eee;
+  border: 2px solid #f0f0f0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .Customer-Reviews .info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 4px;
+  gap: 5px;
 }
 
 .Customer-Reviews .more-reviews-link {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 35px;
 }
 
 .Customer-Reviews .more-reviews-link a {
   display: inline-block;
-  background-color: #6c63ff;
+  background: linear-gradient(90deg, #6c63ff, #857aff);
   color: #fff;
-  font-weight: bold;
-  padding: 10px 25px;
-  border-radius: 30px;
-  transition: background 0.3s ease, transform 0.2s ease;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(108, 99, 255, 0.25);
 }
 
 .Customer-Reviews .more-reviews-link a:hover {
-  background-color: #554bdd;
-  transform: translateY(-2px);
+  background: linear-gradient(90deg, #5a4fff, #766eff);
+  transform: translateY(-3px);
+  box-shadow: 0 7px 25px rgba(108, 99, 255, 0.3);
 }
 
 
