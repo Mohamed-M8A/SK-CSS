@@ -479,6 +479,8 @@
   text-decoration: underline;
 }
 
+/* ==== Customer Reviews Section ==== */
+
 .Customer-Reviews {
   background: #ffffff;
   border-radius: 18px;
@@ -498,26 +500,29 @@
   letter-spacing: -0.5px;
 }
 
+/* make reviews grid layout */
+.Customer-Reviews .reviews-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+}
+
 .Customer-Reviews .review {
   display: flex;
   align-items: flex-start;
   gap: 15px;
-  margin-bottom: 25px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
+  padding: 20px;
+  border: 1px solid #eee;
   border-radius: 14px;
+  background: #fff;
   transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
 }
 
 .Customer-Reviews .review:hover {
   background: #f9f9ff;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.08);
-}
-
-.Customer-Reviews .review:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
+  box-shadow: 0 8px 20px rgba(108, 99, 255, 0.12);
 }
 
 .Customer-Reviews .reviewer-img {
@@ -537,9 +542,28 @@
   gap: 5px;
 }
 
+.Customer-Reviews .info .name {
+  font-weight: 700;
+  color: #222;
+  font-size: 16px;
+}
+
+.Customer-Reviews .info .date {
+  font-size: 13px;
+  color: #999;
+}
+
+.Customer-Reviews .info .text {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+  margin-top: 6px;
+}
+
+/* "More Reviews" button */
 .Customer-Reviews .more-reviews-link {
   text-align: center;
-  margin-top: 35px;
+  margin-top: 40px;
 }
 
 .Customer-Reviews .more-reviews-link a {
@@ -547,7 +571,7 @@
   background: linear-gradient(90deg, #6c63ff, #857aff);
   color: #fff;
   font-weight: 700;
-  padding: 12px 28px;
+  padding: 12px 30px;
   border-radius: 40px;
   transition: all 0.3s ease;
   box-shadow: 0 5px 20px rgba(108, 99, 255, 0.25);
@@ -559,6 +583,24 @@
   box-shadow: 0 7px 25px rgba(108, 99, 255, 0.3);
 }
 
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .Customer-Reviews {
+    padding: 25px;
+  }
+
+  .Customer-Reviews h3 {
+    font-size: 22px;
+  }
+
+  .Customer-Reviews .reviews-container {
+    grid-template-columns: 1fr;
+  }
+
+  .Customer-Reviews .review {
+    padding: 18px;
+  }
+}
 
 /* ============================
    ✅ تبويبات الصفحة
