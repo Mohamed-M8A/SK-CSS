@@ -218,5 +218,160 @@
    ✅ تصميم ويدجت العرض
 ========================= */
 
+/* 🌫️ الخلفية المحايدة للـ Grid Container (لإظهار تأثير الزجاج) */
+#my-widget {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  margin: 0 0 60px;
+  background: linear-gradient(135deg, #e0e5ec, #f0f2f5); 
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🧊 تحديث روابط العناصر (البطاقات) - التأثير الزجاجي */
+#my-widget a {
+  display: flex;
+  flex-direction: column; /* لتجميع الصورة والنص عموديًا */
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 18px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+  transition: all 0.3s ease-out; 
+  position: relative;
+}
+
+/* ⬆️ تأثير التحويم (Hover) - حركة بسيطة وأنيقة */
+#my-widget a:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+}
+
+/* 📸 الصورة مع التدرج الأسود - الآن تظهر بالكامل */
+#my-widget a .image-wrapper { 
+  position: relative;
+  width: 100%;
+  height: 200px; /* نفس ارتفاع الصورة */
+  overflow: hidden;
+  display: flex; /* لمركزة الصورة */
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1); /* خلفية خفيفة للصورة إذا كانت شفافة */
+}
+
+#my-widget a img {
+  max-width: 90%; /* حجم أقصى للسماح ببعض الحشو */
+  max-height: 90%; /* حجم أقصى للسماح ببعض الحشو */
+  object-fit: contain; /* الصور تظهر بالكامل */
+  transition: transform 0.3s ease-out;
+  z-index: 1; /* لتكون فوق التدرج */
+}
+
+#my-widget a:hover img {
+  transform: scale(1.05); /* تكبير بسيط جدًا */
+}
+
+/* 🌑 التدرج الأسود أسفل الصورة */
+#my-widget a .image-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%; /* زيادة ارتفاع التدرج ليتسع للنص الجديد إذا كان أعلى قليلاً */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); 
+  pointer-events: none; 
+  z-index: 2; 
+}
+
+/* 📝 تنسيق المحتوى النصي الجديد */
+#my-widget a .card-content {
+  width: 100%;
+  padding: 15px; /* حشو داخلي للمحتوى */
+  text-align: center;
+  background: transparent; /* خلفية شفافة */
+  position: absolute; /* لوضع النص فوق التدرج */
+  bottom: 0;
+  left: 0;
+  z-index: 3; /* ليكون فوق الصورة والتدرج */
+  color: #ffffff; /* نص أبيض */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); /* ظل نص لزيادة الوضوح */
+}
+
+#my-widget a .card-content h3 {
+  font-size: 1.2em; /* حجم أكبر للعنوان */
+  font-weight: 700;
+  margin: 0 0 5px; /* مسافة أسفل العنوان */
+  color: #ffffff;
+}
+
+#my-widget a .card-content p {
+  font-size: 0.9em; /* حجم أصغر للوصف */
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.4;
+  opacity: 0.9; /* شفافية بسيطة للوصف */
+  color: #ffffff;
+}
+
+/* إزالة الـ ::after السابق الذي كان يعرض الـ alt text */
+#my-widget a::after {
+  content: none; 
+}
+
+
+/* 📱 تحديث الوسائط (Media Queries) - تعديلات بسيطة */
+@media (max-width: 992px) {
+  #my-widget {
+    padding: 35px;
+    gap: 25px;
+  }
+  #my-widget a .image-wrapper, #my-widget a img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  #my-widget {
+    padding: 30px;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+  #my-widget a .image-wrapper, #my-widget a img {
+    height: 160px;
+  }
+  #my-widget a .card-content h3 {
+    font-size: 1.1em;
+  }
+  #my-widget a .card-content p {
+    font-size: 0.85em;
+  }
+}
+
+@media (max-width: 480px) {
+  #my-widget {
+    padding: 25px;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  }
+  #my-widget a .image-wrapper, #my-widget a img {
+    height: 140px;
+  }
+  #my-widget a .card-content h3 {
+    font-size: 1em;
+  }
+  #my-widget a .card-content p {
+    font-size: 0.8em;
+  }
+}
 
 
