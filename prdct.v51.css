@@ -105,7 +105,7 @@
   width: 75px;
   height: 75px;
   object-fit: cover;
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   cursor: pointer;
   transition: border 0.3s ease, transform 0.2s ease;
   opacity: 0.8;
@@ -113,14 +113,14 @@
 
 .thumbnail-container img:hover {
   opacity: 1;
-  border: 3px solid #4361ee;
+  border: 2px solid #000000;
   transform: translateY(-2px);
 }
 
 .thumbnail-container img.active-thumb {
   opacity: 1;
-  border: 3px solid #4361ee;
-  box-shadow: 0 0 0 1px #4361ee;
+  border: 2px solid #000000;
+  box-shadow: 0 0 0 1px #000000;
   transform: translateY(0);
 }
 
