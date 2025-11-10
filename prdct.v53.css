@@ -47,7 +47,7 @@
 .main-image-container {
   position: relative;
   width: 100%;
-  max-width: 500ppx;
+  max-width: 450ppx;
   overflow: hidden;
   min-height: 200px;
   aspect-ratio: 1 / 1;
@@ -60,12 +60,8 @@
   object-fit: cover;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   cursor: zoom-in;
-  transition: transform 0.3s ease;
 }
 
-.main-image-container img:hover {
-  transform: scale(1.02);
-}
 
 /* الصور المصغرة */
 .thumbnail-wrapper {
@@ -114,7 +110,6 @@
 .thumbnail-container img:hover {
   opacity: 1;
   border: 2px solid #000000;
-  transform: translateY(-2px);
 }
 
 .thumbnail-container img.active-thumb {
