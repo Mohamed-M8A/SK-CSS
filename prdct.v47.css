@@ -1,18 +1,17 @@
-/* =======================================
-   ✅ عرض المنتج الرئيسي (Modern & Clean Box)
-   ======================================= */
+/* ============================
+   ✅ عرض المنتج الرئيسي
+============================== */
 .product-box {
   flex: 1;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 30px; /* زيادة التباعد */
-  padding: 25px; /* إضافة حشوة داخلية */
-  /* إزالة الحدود واستخدام الظل */
+  gap: 30px;
+  padding: 25px;
   border: none;
   background-color: #ffffff;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* ظل خفيف وعميق */
-  border-radius: 10px; /* لمسة تدوير ناعمة */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
   flex-wrap: wrap;
 }
 
@@ -22,34 +21,33 @@
 }
 
 .product-title {
-  /* خط أكثر جرأة وتباين */
   font-size: 34px !important;
   font-weight: 700 !important;
-  color: #1a1a2e !important; /* لون داكن جداً لتباين قوي */
+  color: #1a1a2e !important;
   margin: 0 0 12px 0 !important;
   line-height: 1.3 !important;
 }
 
 .short-description {
-  color: #555566; /* لون رمادي أغمق وأكثر دفئاً */
+  color: #555566;
   font-style: normal;
   font-size: 17px;
-  letter-spacing: normal; /* إلغاء التباعد الحرفي */
+  letter-spacing: normal;
   line-height: 1.6;
-  padding-right: 15px; /* مسافة داخلية لجهة اليمين */
-  border-right: 4px solid #4361ee; /* شريط جانبي مميز */
+  padding-right: 15px;
+  border-right: 4px solid #4361ee;
   margin-bottom: 25px;
 }
 
-/* =======================================
-   ✅ عرض الصور والسلايدر (Elevated Gallery)
-   ======================================= */
+/* ============================
+   ✅ عرض الصور والسلايدر
+============================== */
 
 /* الصورة الرئيسية */
 .main-image-container {
   position: relative;
   width: 100%;
-  max-width: 450px; /* حجم مثالي */
+  max-width: 450px;
   overflow: hidden;
   min-height: 200px;
   aspect-ratio: 1 / 1;
@@ -60,15 +58,15 @@
 #mainImage {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* لضمان ملء المساحة */
+  object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12); /* ظل أوضح للصورة */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   cursor: zoom-in;
   transition: transform 0.3s ease;
 }
 
 .main-image-container img:hover {
-  transform: scale(1.02); /* تأثير بسيط عند المرور */
+  transform: scale(1.02);
 }
 
 /* الصور المصغرة */
@@ -82,21 +80,20 @@
 }
 
 .thumbnail-container {
-  /* تحويله إلى سلايدر أفقي سلس (خاصة للجوال) */
   display: flex;
   overflow-x: auto;
-  max-width: 100%; /* يجب أن يكون مرناً */
+  max-width: 100%;
   margin: auto;
   gap: 12px;
   scroll-behavior: smooth;
-  flex-wrap: nowrap; /* إجباره على التمرير الأفقي */
+  flex-wrap: nowrap;
   justify-content: flex-start;
   direction: rtl;
   padding-bottom: 5px;
 }
 
 .thumbnail-container::-webkit-scrollbar {
-  display: none; /* إخفاء شريط التمرير */
+  display: none;
 }
 
 .thumbnails-slider {
@@ -119,7 +116,7 @@
 
 .thumbnail-container img:hover {
   opacity: 1;
-  border: 3px solid #4361ee; /* لون مميز عند التفاعل */
+  border: 3px solid #4361ee;
   transform: translateY(-2px);
 }
 
@@ -140,9 +137,9 @@
   flex-direction: column;
 }
 
-/* =======================================
-   ✅ نافذة تكبير الصورة (Modal - Darkened)
-   ======================================= */
+/* ============================
+   ✅ نافذة تكبير الصورة (مودال)
+============================== */
 
 .modal {
   display: none;
@@ -151,7 +148,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.95); /* خلفية أكثر قتامة وتركيزاً */
+  background-color: rgba(0, 0, 0, 0.95);
   z-index: 2000;
   justify-content: center;
   align-items: center;
@@ -160,8 +157,8 @@
 .modal-content {
   position: relative;
   width: 90%;
-  max-width: 700px; /* زيادة حجم الصورة */
-  background-color: transparent; /* إزالة الخلفية البيضاء */
+  max-width: 700px;
+  background-color: transparent;
   padding: 0;
   box-shadow: none;
 }
@@ -174,13 +171,12 @@
 }
 
 .modal .close {
-  /* زر إغلاق ناصع ومميز */
   position: absolute;
   top: 20px;
   right: 20px;
   width: 40px;
   height: 40px;
-  background-color: #f72585; /* لون لهجة مميز */
+  background-color: #f72585;
   border: 2px solid #f72585;
   border-radius: 50%;
   display: flex;
@@ -190,7 +186,7 @@
   font-weight: bold;
   color: #fff;
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transition: background-color 0.3s, transform 0.3s;
   z-index: 2001;
 }
@@ -202,15 +198,15 @@
   transform: rotate(90deg);
 }
 
-/* =======================================
-   ✅ أسهم التنقل (Slideshow & Thumbnails)
-   ======================================= */
+/* ============================
+   ✅ أسهم التنقل (السلايدر والصور)
+============================== */
 
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 44px; /* حجم مثالي */
+  width: 44px;
   height: 44px;
   background-color: #fff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -227,7 +223,7 @@
 
 .arrow:hover {
   opacity: 1;
-  background-color: #4361ee; /* لون أساسي عند المرور */
+  background-color: #4361ee;
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -257,7 +253,6 @@
   border-left: 10px solid #fff;
 }
 
-/* وضع الأسهم الأصلي (لم يتم عكسها) */
 .arrow.left {
   left: 10px;
 }
@@ -271,14 +266,14 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 30px; /* أصغر */
-  height: 70px; /* أطول قليلاً */
+  width: 30px;
+  height: 70px;
   background-color: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 4px;
   font-size: 0;
   opacity: 0.9;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .arrow.small-nav:hover {
@@ -316,19 +311,19 @@
 }
 
 
-/* =======================================
-   ✅ معلومات المنتج (Grid Layout)
-   ======================================= */
+/* ============================
+   ✅ معلومات المنتج
+============================== */
 
 .info-boxes-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* تحسين التجاوب */
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 15px;
   margin-top: 25px;
 }
 
 .info-box {
-  background: #f7f9fc; /* خلفية فاتحة ومختلفة */
+  background: #f7f9fc;
   padding: 16px;
   border-radius: 8px;
   border: 1px solid #eef1f5;
@@ -359,9 +354,10 @@
   color: #222;
 }
 
-/* =======================================
+
+/* ============================
    ✅ التجاوب (Media Queries)
-   ======================================= */
+============================== */
 @media (max-width: 992px) {
   .product-box {
     flex-direction: column;
@@ -381,6 +377,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 /* ============================
    ✅ السعر والعروض
 ============================== */
