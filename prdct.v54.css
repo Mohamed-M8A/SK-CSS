@@ -47,7 +47,7 @@
 .main-image-container {
   position: relative;
   width: 100%;
-  max-width: 450ppx;
+  max-width: 350ppx;
   overflow: hidden;
   min-height: 200px;
   aspect-ratio: 1 / 1;
