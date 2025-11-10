@@ -578,9 +578,6 @@
 
 .Customer-Reviews .review:hover {
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 20px;
-  padding: 20px;
-  margin: -8px -20px 28px -20px;
 }
 
 .Customer-Reviews .review:last-child {
@@ -766,7 +763,6 @@ tr {
 
 tr:hover {
   background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-  transform: scale(1.01);
 }
 
 .green {
@@ -853,7 +849,6 @@ tr:hover {
   padding: 24px;
   background: linear-gradient(135deg, #fff 0%, #f8fafc 100%);
   border-radius: 20px;
-  font-family: "Tajawal", sans-serif;
   direction: rtl;
   border: 1px solid #f1f5f9;
 }
