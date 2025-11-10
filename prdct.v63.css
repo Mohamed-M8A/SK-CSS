@@ -8,7 +8,6 @@
   align-items: flex-start;
   gap: 40px;
   padding: 30px;
-  border-radius: 24px;
   background: linear-gradient(135deg, #f8faff 0%, #f0f4ff 100%);
   border: 1px solid #e8eeff;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
@@ -575,7 +574,6 @@
   margin-bottom: 36px;
   padding-bottom: 28px;
   border-bottom: 1px solid #f1f5f9;
-  transition: all 0.3s ease;
 }
 
 .Customer-Reviews .review:hover {
@@ -597,7 +595,6 @@
   object-fit: cover;
   flex-shrink: 0;
   border: 3px solid #e2e8f0;
-  transition: all 0.3s ease;
 }
 
 .Customer-Reviews .review:hover .reviewer-img {
@@ -623,14 +620,12 @@
   font-weight: 700;
   padding: 14px 32px;
   border-radius: 16px;
-  transition: all 0.3s ease;
   text-decoration: none;
   box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
 }
 
 .Customer-Reviews .more-reviews-link a:hover {
   background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
-  transform: translateY(-1px);
   box-shadow: 0 12px 35px rgba(139, 92, 246, 0.5);
 }
 
