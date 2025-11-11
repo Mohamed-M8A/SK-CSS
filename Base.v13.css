@@ -296,15 +296,28 @@ mark {
   #post-body object,
   #post-body embed,
   #post-body video,
-  #post-body img{
+  #post-body gif,
+  #post-body img:not(.thumbnail-container img):not(#mainImage):not(.profile-image):not(.fire-gif) {
     width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
     display: block;
     margin: 15px auto;
   }
-}
 
+  /* ✅ قواعد خاصة بصورة النار فقط */
+  .fire-gif {
+    width: 24px !important;
+    height: 24px !important;
+    display: inline-block !important;
+    vertical-align: middle;
+    margin-left: 4px !important;
+    margin-right: 0 !important;
+    object-fit: contain;
+    position: relative;
+    top: -0.1em;
+  }
+}
 
 /* ============================
    ✅ Data
