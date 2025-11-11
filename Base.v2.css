@@ -13,12 +13,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* ✅ فقط منع التمرير الأفقي بدون كسر sticky */
-html, body {
-  overflow-x: hidden;
-  overflow-y: visible !important; /* السماح بالـ sticky */
-}
-
 label { cursor: pointer; }
 iframe { border: 0; }
 
