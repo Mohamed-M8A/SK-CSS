@@ -281,6 +281,29 @@ mark {
   100% { transform: rotate(360deg); }
 }
 
+/* =========================
+   ✅ Mobile scaling
+========================= */
+
+.product-box > * {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+}
+
+/* ✅ Video and image scaling for mobile only */
+@media (max-width: 768px) {
+  #post-body iframe,
+  #post-body object,
+  #post-body embed,
+  #post-body video,
+  #post-body img{
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin: 15px auto;
+  }
+}
 
 
 /* ============================
