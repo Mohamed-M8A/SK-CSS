@@ -13,6 +13,11 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+html, body {
+  overflow-x: hidden;
+  overflow-y: visible !important;
+}
+
 label { cursor: pointer; }
 iframe { border: 0; }
 
