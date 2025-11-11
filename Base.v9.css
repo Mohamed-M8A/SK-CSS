@@ -296,7 +296,6 @@ mark {
   #post-body object,
   #post-body embed,
   #post-body video,
-  #post-body gif,
   #post-body img:not(.thumbnail-container img):not(#mainImage):not(.profile-image) {
     width: 100% !important;
     max-width: 100% !important;
@@ -304,15 +303,6 @@ mark {
     display: block;
     margin: 15px auto;
   }
-}
-
-/* ✅ إصلاح حجم صورة النار على الموبايل */
-.fire-gif {
-  width: auto !important;
-  height: auto !important;
-  max-width: none !important;
-  display: inline-block !important;
-  margin: 0 !important;
 }
 
 /* ============================
