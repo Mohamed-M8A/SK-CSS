@@ -60,13 +60,6 @@ iframe { border: 0; }
   #main { min-height: 250px; }
 }
 
-/* ✅ Primary (dark mode) */
-.dark-mode #primary {
-  background-color: #181818;
-  color: #ffffff;
-  border: 1px solid #2c2c2c;
-}
-
 /* =========================
    ✅ Typography
 ========================= */
@@ -288,15 +281,6 @@ mark {
   100% { transform: rotate(360deg); }
 }
 
-/* ============================
-   ✅ Data
-============================== */
-
-.data
-{
-display:none;
-}
-
 /* =========================
    ✅ Mobile scaling
 ========================= */
@@ -320,6 +304,15 @@ display:none;
     display: block;
     margin: 15px auto;
   }
+}
+
+/* ============================
+   ✅ Data
+============================== */
+
+.data
+{
+display:none;
 }
 
 /* =========================
