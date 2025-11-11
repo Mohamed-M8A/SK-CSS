@@ -306,6 +306,15 @@ mark {
   }
 }
 
+/* ✅ إصلاح حجم صورة النار على الموبايل */
+.fire-gif {
+  width: auto !important;
+  height: auto !important;
+  max-width: none !important;
+  display: inline-block !important;
+  margin: 0 !important;
+}
+
 /* ============================
    ✅ Data
 ============================== */
