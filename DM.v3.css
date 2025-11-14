@@ -207,3 +207,20 @@
   background-color: #222;
   color: #fff;
 }
+
+/* زر الوضع الداكن */
+#dark-header label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+#dark-header label:hover {
+  background: rgba(255,255,255,0.15);
+}
+
