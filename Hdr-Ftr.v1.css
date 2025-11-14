@@ -537,36 +537,3 @@ body.dark-mode #dark-toggler .icon-sun  { display: inline; }
 .footer-bottom p {
   margin: 0;
 }
-
-/* ===========================
-   Back-to-top
-=========================== */
-#back-to-top {
-  position: fixed;
-  left: 30px;
-  bottom: 30px;
-  z-index: 9999999;
-}
-
-#back-to-top a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 36px;
-  height: 36px;
-  background: #222;
-  color: #fff;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-#back-to-top a:hover {
-  background: #444;
-}
-
-#back-to-top .icon {
-  width: 18px;
-  height: 18px;
-  fill: currentColor;
-}
