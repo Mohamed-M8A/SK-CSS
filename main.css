@@ -216,6 +216,41 @@ tr:hover {
 }
 
 /* =========================
+   ✅ Labels
+========================= */
+
+.post-labels {
+  margin: 25px 0 0;
+  padding-top: 15px;
+  border-top: 2px dashed #ccc;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.post-labels a {
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  padding: 7px 16px;
+  border-radius: 30px;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+  transition: all .25s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,.05);
+}
+
+.post-labels a:hover {
+  background: #111;
+  border-color: #111;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,.15);
+}
+
+/* =========================
    ✅ Pagination
 ========================= */
 
@@ -355,7 +390,6 @@ display:none;
     margin: 15px auto;
   }
 
-  /* ✅ قواعد خاصة بصورة النار فقط */
   .fire-gif {
     width: 24px !important;
     height: 24px !important;
