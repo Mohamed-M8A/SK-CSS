@@ -235,7 +235,6 @@ tr:hover {
   border-radius: 999px;
   font-size: 14px;
   font-weight: 500;
-  transition: background 0.3s ease, color 0.3s ease;
 }
 
 #pagination button.active {
@@ -282,6 +281,24 @@ mark {
 }
 
 /* =========================
+   ✅ Icons
+========================= */
+
+.icon-lg {
+  width: 200px;
+  height: auto;
+}
+
+/* ============================
+   ✅ Data
+============================== */
+
+.data
+{
+display:none;
+}
+
+/* =========================
    ✅ Mobile scaling
 ========================= */
 
@@ -317,22 +334,4 @@ mark {
     position: relative;
     top: -0.1em;
   }
-}
-
-/* ============================
-   ✅ Data
-============================== */
-
-.data
-{
-display:none;
-}
-
-/* =========================
-   ✅ Icons
-========================= */
-
-.icon-lg {
-  width: 200px;
-  height: auto;
 }
