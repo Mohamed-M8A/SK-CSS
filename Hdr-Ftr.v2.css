@@ -16,7 +16,7 @@
 }
 
 /* ===========================
-    اللوجو
+    Logo
 =========================== */
 .logo img {
   max-height: 50px; 
@@ -104,7 +104,7 @@
 }
 
 /* ===========================
-   الدروب داون الخاص بالسجل
+   Search History Dropdown
 =========================== */
 .search-history-dropdown {
   position: absolute;
@@ -243,7 +243,7 @@
 }
 
 /* ===========================
-   قائمة اختيار دولة 
+   Country Selection List
 =========================== */
 .custom-dropdown {
   position: relative;
