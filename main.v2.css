@@ -38,12 +38,10 @@ html, body {
 
 @media (max-width: 768px) {
   #primary { padding: 0 10px; }
-  #main { min-height: 300px; }
 }
 
 @media (max-width: 480px) {
   #primary { padding: 0 5px; }
-  #main { min-height: 250px; }
 }
 
 /* =========================
