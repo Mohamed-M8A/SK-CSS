@@ -45,6 +45,34 @@ html, body {
 }
 
 /* =========================
+   ✅ scrollbar
+========================= */
+
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #007bff;
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #0056b3;
+}
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: #007bff #e0e0e0;
+}
+
+/* =========================
    ✅ Typography
 ========================= */
 
