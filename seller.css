@@ -1,5 +1,5 @@
 /* ============================
-   ✅ شريط البائع (Responsive)
+   ✅ Seller Bar
 ============================== */
 
 .bar {
@@ -63,7 +63,6 @@
    ✅ Responsive Breakpoints
 ============================== */
 
-/* تابلت */
 @media (max-width: 992px) {
     .text {
         font-size: 18px;
@@ -76,7 +75,6 @@
     }
 }
 
-/* موبايل */
 @media (max-width: 768px) {
     .bar {
         flex-direction: column;
@@ -109,7 +107,6 @@
     }
 }
 
-/* موبايل صغير جدًا */
 @media (max-width: 480px) {
     .text {
         font-size: 18px;
@@ -127,7 +124,7 @@
 }
 
 /* ============================
-   ✅ كوبون الخصم 
+   ✅ Coupon
 ============================== */
 .coupons-wrapper {
   display: flex;
