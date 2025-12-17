@@ -90,7 +90,6 @@ h4 { font-size: 38px; }
 h5 { font-size: 36px; }
 h6 { font-size: 32px; }
 
-/* Paragraphs */
 p {
   font-size: 28px;
   margin: 0 0 1rem;
@@ -100,7 +99,6 @@ small {
   font-size: 14px;
 }
 
-/* Responsive tweaks */
 @media (max-width: 768px) {
   h1 { font-size: 32px; }
   h2 { font-size: 26px; }
@@ -327,8 +325,9 @@ mark {
 }
 
 /* ===========================
-   Back-to-top
+   ✅ Back-to-top
 =========================== */
+
 #back-to-top{
   position:fixed;
   left:30px;
@@ -385,7 +384,6 @@ display:none;
   max-width: 100% !important;
 }
 
-/* ✅ Video and image scaling for mobile only */
 @media (max-width: 768px) {
   #post-body iframe,
   #post-body object,
