@@ -1,6 +1,7 @@
 /* ===========================
-    Header
+   ✅ Header
 =========================== */
+
 #header {
   background: #131921; 
   color: white;
@@ -16,7 +17,7 @@
 }
 
 /* ===========================
-    Logo
+   ✅ Logo
 =========================== */
 .logo img {
   max-height: 50px; 
@@ -27,7 +28,7 @@
 }
 
 /* ===========================
-   Search Container
+  ✅ Search Container
 =========================== */
 .search-container {
   padding: 0 10px;
@@ -104,7 +105,7 @@
 }
 
 /* ===========================
-   Search History Dropdown
+  ✅ Search History Dropdown
 =========================== */
 .search-history-dropdown {
   position: absolute;
@@ -138,7 +139,6 @@
   background: #f5f5f5;
 }
 
-/* النصوص داخل السجل */
 .search-history-dropdown span {
   color: #444;   
   user-select: none; 
@@ -148,7 +148,6 @@
   color: #3200ba; 
 }
 
-/* زر الحذف (X) */
 .search-history-dropdown .delete-btn {
   font-size: 25px;  
   color: #999; 
@@ -162,18 +161,12 @@
   color: #ff0000;
 }
 
-/* =========================
-   Responsive
-========================= */
 @media (max-width: 768px) {
   .search-box-form {
     max-width: 100%;  
   }
 }
 
-/* ===========================
-    Header Actions
-=========================== */
 .header-actions {
   display: flex;
   align-items: center;
@@ -181,7 +174,7 @@
 }
 
 /* ===========================
-    Cart Widget
+   ✅ Cart Widget
 =========================== */
 #cart-widget-header {
   display: flex;
@@ -243,7 +236,7 @@
 }
 
 /* ===========================
-   Country Selection List
+  ✅ Country Selection List
 =========================== */
 .custom-dropdown {
   position: relative;
@@ -291,7 +284,6 @@
   background: #f0f0f0;
 }
 
-/* Toast */
 #country-toast {
   visibility: hidden;
   min-width: 220px;
@@ -316,14 +308,14 @@
 }
 
 .custom-dropdown .selected::after {
-  content: "\25BC"; /* ▼ */
+  content: "\25BC";
   font-size: 10px;
   margin-left: 6px;
   color: #555;
 }
 
 .custom-dropdown.open .selected::after {
-  content: "\25B2"; /* ▲ */
+  content: "\25B2";
 }
 
 .dark-mode .custom-dropdown .selected {
@@ -351,7 +343,7 @@
 }
 
 /* ===========================
-   🌙☀️ Dark Mode Toggle
+   ✅ DM Toggle
 =========================== */
 .dark-mode-toggle {
   margin-left: 15px;
@@ -377,24 +369,17 @@
   transform: rotate(10deg);
 }
 
-/* SVG أيقونة */
 #dark-toggler svg {
   width: 22px;
   height: 22px;
   fill: currentColor;
 }
 
-/* الوضع الافتراضي: القمر ظاهر */
 #dark-toggler .icon-moon { display: inline; }
 #dark-toggler .icon-sun  { display: none; }
 
-/* عند تفعيل الوضع الداكن: القمر يختفي والشمس تظهر */
 body.dark-mode #dark-toggler .icon-moon { display: none; }
 body.dark-mode #dark-toggler .icon-sun  { display: inline; }
-
-/* ===========================
-    متجاوب (الموبايل)
-=========================== */
 
 @media (max-width: 768px) {
   #cart-count {
@@ -431,7 +416,7 @@ body.dark-mode #dark-toggler .icon-sun  { display: inline; }
 }
 
 /* =========================
-   Footer
+  ✅ Footer
 ========================= */
 #footer {
   background: #0a0d14;
