@@ -1,7 +1,7 @@
 /* =========================
-   ✅ تصميم التصنيفات
+   ✅ Labels 
 ========================= */
-/* الشريط العلوي (Topbar) */
+
 #widget-topbar {
     width: 100%;
     background: #232f3e;
@@ -28,7 +28,6 @@
     padding: 15px;
 }
 
-/* تصنيفات سطح المكتب */
 #widget-desktop-cats {
     display: flex;
     gap: 40px;
@@ -59,7 +58,6 @@
     color: white; 
 }
 
-/* تأثير التسطير (Underline effect) */
 .widget-cat-link::after {
     content: '';
     position: absolute;
@@ -68,14 +66,13 @@
     width: 100%;
     height: 2px;
     background: white;
-    /* تطبيق قيمة الـ Custom Property */
+
     transform: scaleX(var(--underline-scale));
     transform-origin: right;
     transition: transform 0.25s ease;
     display: block;
 }
 
-/* زر التوسيع في الشريط العلوي */
 .widget-expand-btn {
     cursor: pointer;
     font-size: 14px;
@@ -94,7 +91,6 @@
     background: #828282;
 }
 
-/* السايد بار (Sidebar) */
 #widget-sidebar {
     width: 300px;
     max-width: 80%;
@@ -112,7 +108,6 @@
     direction: rtl;
 }
 
-/* شريط عنوان السايد بار */
 #widget-header-bar {
     width: 100%;
     height: 50px;
@@ -139,7 +134,6 @@
     overflow-y: auto;
 }
 
-/* صفوف التصنيفات */
 .widget-category-row {
     display: flex;
     justify-content: space-between;
@@ -161,7 +155,6 @@
     font-weight: normal;
 }
 
-/* زر الرجوع */
 .widget-back-row {
     padding: 14px 20px;
     cursor: pointer;
@@ -176,7 +169,6 @@
     background-color: #eee;
 }
 
-/* زر التوسيع في السايد بار */
 .widget-expand-btn-sidebar {
     cursor: pointer;
     font-size: 16px;
@@ -195,7 +187,6 @@
     background: #828282;
 }
 
-/* الطبقة السوداء (Overlay) */
 #widget-overlay {
     position: fixed;
     top: 0;
@@ -207,7 +198,6 @@
     display: none;
 }
 
-/* الاستجابة (Responsive) */
 @media (max-width: 768px) {
     #widget-desktop-cats {
         display: none;
@@ -215,10 +205,9 @@
 }
 
 /* =========================
-   ✅ تصميم ويدجت العرض
+   ✅ Widget
 ========================= */
 
-/* 🌫️ الخلفية المحايدة للـ Grid Container (لإظهار تأثير الزجاج) */
 #my-widget {
   width: 100%;
   display: grid;
@@ -233,10 +222,9 @@
   overflow: hidden;
 }
 
-/* 🧊 تحديث روابط العناصر (البطاقات) - التأثير الزجاجي */
 #my-widget a {
   display: flex;
-  flex-direction: column; /* لتجميع الصورة والنص عموديًا */
+  flex-direction: column;
   align-items: center;
   background: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -250,86 +238,79 @@
   position: relative;
 }
 
-/* ⬆️ تأثير التحويم (Hover) - حركة بسيطة وأنيقة */
 #my-widget a:hover {
   transform: translateY(-5px); 
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
 }
 
-/* 📸 الصورة مع التدرج الأسود - الآن تظهر بالكامل */
 #my-widget a .image-wrapper { 
   position: relative;
   width: 100%;
-  height: 200px; /* نفس ارتفاع الصورة */
+  height: 200px;
   overflow: hidden;
-  display: flex; /* لمركزة الصورة */
+  display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.1); /* خلفية خفيفة للصورة إذا كانت شفافة */
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 #my-widget a img {
-  max-width: 90%; /* حجم أقصى للسماح ببعض الحشو */
-  max-height: 90%; /* حجم أقصى للسماح ببعض الحشو */
-  object-fit: contain; /* الصور تظهر بالكامل */
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
   transition: transform 0.3s ease-out;
-  z-index: 1; /* لتكون فوق التدرج */
+  z-index: 1;
 }
 
 #my-widget a:hover img {
-  transform: scale(1.05); /* تكبير بسيط جدًا */
+  transform: scale(1.05);
 }
 
-/* 🌑 التدرج الأسود أسفل الصورة */
 #my-widget a .image-wrapper::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 60%; /* زيادة ارتفاع التدرج ليتسع للنص الجديد إذا كان أعلى قليلاً */
+  height: 60%;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); 
   pointer-events: none; 
   z-index: 2; 
 }
 
-/* 📝 تنسيق المحتوى النصي الجديد */
 #my-widget a .card-content {
   width: 100%;
-  padding: 15px; /* حشو داخلي للمحتوى */
+  padding: 15px;
   text-align: center;
-  background: transparent; /* خلفية شفافة */
-  position: absolute; /* لوضع النص فوق التدرج */
+  background: transparent;
+  position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 3; /* ليكون فوق الصورة والتدرج */
-  color: #ffffff; /* نص أبيض */
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); /* ظل نص لزيادة الوضوح */
+  z-index: 3;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 #my-widget a .card-content h3 {
-  font-size: 1.2em; /* حجم أكبر للعنوان */
+  font-size: 1.2em;
   font-weight: 700;
-  margin: 0 0 5px; /* مسافة أسفل العنوان */
+  margin: 0 0 5px;
   color: #ffffff;
 }
 
 #my-widget a .card-content p {
-  font-size: 0.9em; /* حجم أصغر للوصف */
+  font-size: 0.9em;
   font-weight: 400;
   margin: 0;
   line-height: 1.4;
-  opacity: 0.9; /* شفافية بسيطة للوصف */
+  opacity: 0.9;
   color: #ffffff;
 }
 
-/* إزالة الـ ::after السابق الذي كان يعرض الـ alt text */
 #my-widget a::after {
   content: none; 
 }
 
-
-/* 📱 تحديث الوسائط (Media Queries) - تعديلات بسيطة */
 @media (max-width: 992px) {
   #my-widget {
     padding: 35px;
@@ -373,5 +354,3 @@
     font-size: 0.8em;
   }
 }
-
-
